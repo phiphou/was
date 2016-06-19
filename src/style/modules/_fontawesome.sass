@@ -1,0 +1,97 @@
+/* Modules/Fontawesome */
+
+@import "../vendor/font-awesome/fontawesome";
+
+.fa
+  padding-right: 3px
+
+/* .fa
+  margin-right: 3px;
+  animation-duration: .5s
+  animation-fill-mode: both
+  animation-timing-function: ease-in-out
+  &:hover
+    animation-name: bounce */
+
+.fa-coffee.fa-flip-horizontal
+  margin-right: 4px
+  margin-left: -6px
+  color: hsl(30,50%,40%)
+
+.fa-sun-o
+  color: #FFD200
+
+.fa-thumbs-up,
+.fa-check-circle
+  color: hsl(120,61%,35%)
+
+.fa-download
+  color: hsl(0,100%,100%)
+
+.fa-retweet,
+.fa-circle
+  color: hsl(271,76%,53%)
+
+.fa-twitter,
+.fa-asterisk,
+.fa-question
+  color: #2199E8
+
+.fa-question-circle
+  color: hsl(180,100%,35%)
+
+.fa-database,
+.fa-leaf
+  color: hsl(133,85%,35%)
+
+.fa-wrench
+  color: hsl(210,58%,53%)
+
+.fa-home
+  color: hsl(308,90%,61%)
+  padding-right: 5px
+
+.fa-html5
+  color: hsl(160,27%,47%)
+
+.fa-cogs
+  color: hsl(43,90%,46%)
+
+.fa-css3
+  color: hsl(198,74%,52%)
+
+.fa-flag
+  color: rgb(255, 68, 0)
+
+.fa-book,
+.fa-magic,
+.fa-star
+  color: hsl(39,100%,50%)
+
+#labeled-fa-icon:hover > #icon
+  animation-name: bounce
+
+#icon
+  animation-duration: .5s
+  animation-fill-mode: both
+  font-smoothing: antialiased
+  animation-timing-function: ease
+
+#label
+  transition: all .5s
+
+#labeled-fa-icon:hover > #label
+  font-weight: bold
+  margin-left: 3px
+
+@keyframes bounce
+  0%
+    transform: scale(1)
+  40%
+    transform: scale(1.35)
+  70%
+    transform: scale(1.17)
+  90%
+    transform: scale(1.27)
+  100%
+    transform: scale(1.25)

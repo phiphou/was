@@ -1,0 +1,37 @@
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+
+@import "../../node_modules/font-awesome/scss/variables";
+@import "../../node_modules/font-awesome/scss/mixins";
+@import "../../node_modules/font-awesome/scss/path";
+@import "../../node_modules/font-awesome/scss/core";
+@import "../../node_modules/font-awesome/scss/larger";
+@import "../../node_modules/font-awesome/scss/fixed-width";
+@import "../../node_modules/font-awesome/scss/list";
+@import "../../node_modules/font-awesome/scss/bordered-pulled";
+@import "../../node_modules/font-awesome/scss/animated";
+@import "../../node_modules/font-awesome/scss/rotated-flipped";
+@import "../../node_modules/font-awesome/scss/stacked";
+@import "../../node_modules/font-awesome/scss/screen-reader";
+//@import "icons";
+.#{$fa-css-prefix}-thumbs-up:before { content: $fa-var-thumbs-up; }
+.#{$fa-css-prefix}-home:before { content: $fa-var-home; }
+.#{$fa-css-prefix}-check-circle:before { content: $fa-var-check-circle; }
+.#{$fa-css-prefix}-asterisk:before { content: $fa-var-asterisk; }
+.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }
+.#{$fa-css-prefix}-question-circle:before { content: $fa-var-question-circle; }
+.#{$fa-css-prefix}-question:before { content: $fa-var-question; }
+.#{$fa-css-prefix}-database:before { content: $fa-var-database; }
+.#{$fa-css-prefix}-leaf:before { content: $fa-var-leaf; }
+.#{$fa-css-prefix}-wrench:before { content: $fa-var-wrench; }
+.#{$fa-css-prefix}-html5:before { content: $fa-var-html5; }
+.#{$fa-css-prefix}-cogs:before { content: $fa-var-cogs; }
+.#{$fa-css-prefix}-css3:before { content: $fa-var-css3; }
+.#{$fa-css-prefix}-flag:before { content: $fa-var-flag; }
+.#{$fa-css-prefix}-book:before { content: $fa-var-book; }
+.#{$fa-css-prefix}-magic:before { content: $fa-var-magic; }
+.#{$fa-css-prefix}-star:before { content: $fa-var-star; }
+.#{$fa-css-prefix}-download:before { content: $fa-var-download; }
+.#{$fa-css-prefix}-retweet:before { content: $fa-var-retweet; }
+.#{$fa-css-prefix}-circle:before { content: $fa-var-circle; }
+.#{$fa-css-prefix}-sun-o:before { content: $fa-var-sun-o; }
+.#{$fa-css-prefix}-spinner:before { content: $fa-var-spinner; }

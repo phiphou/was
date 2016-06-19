@@ -1,0 +1,97 @@
+.menu25
+  overflow: hidden
+
+.menu25 > h1
+  margin: 15px
+
+.loading
+    opacity: 0
+    transition: all .8s ease-in-out
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    background: #000
+    z-index: -1
+
+app:empty + .loading
+    opacity: 1
+    z-index: 100
+
+app:empty + .loading h1
+    color: #EEE
+    position: absolute
+    top: 50%
+    width: 100%
+    text-align: center
+    transform: translate(0, -50%)
+
+.router-link-active
+  background-color: #67707E
+
+ul
+  list-style-type: none
+  margin-left: 1.25rem
+
+.row.todo-item
+    border-bottom-style: solid
+    border-bottom-width: thin
+    border-bottom-color: lightgray
+    padding-top: 10px
+    padding-bottom: 5px
+
+.todo-item-delete
+      display: none
+
+.todo-item
+  &:hover
+    .todo-item-delete
+      display: block
+    background-color: #e6e6e6
+  &.completed
+    .todo-item-text
+      color: #A8A8A8
+      text-decoration: line-through
+
+.button.small
+  margin: 0
+
+div#sticker
+  background-color: #000
+
+.home-header
+  background: #F0F0F0
+  margin-bottom: 30px
+  margin-top: 0px
+  border-style: solid
+  border-width: 0.1px
+  border-color: #cacaca
+
+.home-blocks
+  margin-bottom: 10px
+
+.callout > :last-child
+    float: right
+    margin-top: 5px
+
+.callout.alert
+  background-color: #DA3116
+  color: white
+
+md-slide-toggle.unit_switcher
+  margin-left: 4px
+  margin-bottom: 0
+  margin-top: 0
+
+.unit_switcher_label
+  margin-top: 3px
+
+.unit_switcher_cont
+  display: flex
+
+.md-ink-ripple
+  display: none
+
+weather-input form > input
+  margin-bottom: 8px

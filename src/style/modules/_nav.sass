@@ -1,0 +1,59 @@
+/* Modules/Nav */
+
+//@import "foundation/functions"
+
+@import "components/top-bar"
+
+#main-menu, .title-bar
+  background: black
+
+li
+  a
+    color: #fff
+    &:hover, a:hover
+      background: #0C4D78
+      transition: all 0.25s ease-out
+    &:focus, a:focus
+      color: #fff
+  ul
+    background: black
+    border: none
+
+.contain-to-grid
+  text-align: center
+  background-color: black
+
+.dropdown.menu .submenu
+    background: #000
+    border: none
+
+.menu > li:not(.menu-text) > a
+    text-align: left
+    display: block;
+    padding: 0.7rem 1.45rem;
+    outline: 1px black;
+    color: white;
+
+.top-bar
+  padding: 0;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+
+.top-bar ul > li
+  background-color: initial
+  transition: all 0.25s ease-out
+
+.top-bar, .top-bar ul
+  background-color: #0a0a0a
+  padding: 0
+  > li.active
+    background-color: brown
+
+.fixed
+  position: fixed
+  top: 0
+  width: 100%
+
+.fixed2
+  margin-top: 55px !important

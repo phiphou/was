@@ -1,0 +1,25 @@
+version: "{build}"
+
+environment:
+  nodejs_version: "Stable"
+  TSD_GITHUB_TOKEN: "9b18c72997769f3867ef2ec470e626d39661795d"
+
+build: off
+
+clone_depth: 10
+
+init:
+  - git config --global core.autocrlf true
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install -g npm
+  - npm install tslint -g
+  - ps: $env:path = $env:appdata + "\npm;" + $env:path
+  - npm install
+
+test_script:
+  - node --version && npm --version
+  - ps: "npm --version # PowerShell" # Pass comment to PS for easier debugging
+  - npm run build
+  - npm run test
