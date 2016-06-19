@@ -8,7 +8,7 @@
 
 # WAS
 
-__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using the new [Angular2]() within a [Webpack]() buildig environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather application that uses the [Openweather API]().     
+__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using the new [Angular2]() within a [Webpack]() buldig environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather aaplication that uses the [Openweather API]().     
 
 
 ## Quick Start
@@ -23,16 +23,13 @@ $ npm run start
 ```
 Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in `./src/app/`
 
-[comment]: # (# Table of Contents)
-[comment]: # (* [File Structure](#file-structure)
-[comment]: # (* [Getting Started](#getting-started)
-[comment]: # (    * [Dependencies](#dependencies)
-[comment]: # (    * [Installing](#installing)
-[comment]: # (    * [Running the app](#running-the-app)
-[comment]: # (* [Configuration](#configuration)
-[comment]: # (* [TypeScript](#typescript)
-[comment]: # (* [Typings](#typings)
-[comment]: # (* [License](#license)
+## Table of Contents
+ * [Global dependencies](#global-dependencies)
+     * [build dependencies](#build-dependencies)
+     * [dev dependencies](#dev-dependencies)
+ * [Install](#install)
+ * [Usage](#usage)
+ * [License](#license)
 
 [comment]: # (## File Structure)
 [comment]: # (```)
@@ -75,6 +72,8 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 ## Global dependencies
 
+Before installing the application, you have to install some global dépendencies.
+
 #### Build dependencies
 
 | Dependency                                    | Version | Install                              |
@@ -98,10 +97,20 @@ You can also install all these dependencies in just one command :
 
 `$ npm i -g webpack webpack-dev-server karma-cli protractor typings typescript tslint`
 
+## Install
+
+Clone or fork this repo and run `npm install` to install the application.
+
+```bash
+$ git clone https://github.com/phiphou/was.git
+$ cd was
+$ npm install
+```
+Dependencies will be installed in the `./node_modules` folder and typings will be in the `./typings` folder.
+
 ## Usage
 
 #### Start developping
-TODO: Describe the development process
 
 Dive into development right now by just running:
 ```bash
@@ -112,10 +121,12 @@ This will pre-build the application, start webpack's dev server and open your br
 #### Building
 
 You can build the app and get a "ready to deploy" release by just running:
+
 ```bash
 $ npm run build
 ```
 You can also get gzipped files for serving them with `content-encoding`with :
+
 ```bash
 $ npm run build-gz
 ```
@@ -154,6 +165,7 @@ It produce reports you'll find in the `./coverage` folder each time you run unit
 You can also use `npm run coverage`, it will run unit-tests and automatically open your browser to the generated reports.
 
 #### HTML5 mode
+
 Because this app use [Angular's HTML5 mode](https://angular.io/docs/js/latest/api/common/index/LocationStrategy-class.html), url rewriting is needed.
 
 If you're deploying it on an Apache server, you can use the provided `.htaccess` file.
@@ -161,4 +173,5 @@ If you're deploying it on an Apache server, you can use the provided `.htaccess`
 If you use other hosting system, look at this file to see what url rewriting configuration is needed.   
 
 ## License
+
 [MIT](https://opensource.org/licenses/MIT)
