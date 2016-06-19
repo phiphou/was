@@ -7,11 +7,12 @@
 ![Size](https://reposs.herokuapp.com/?path=phiphou/was)
 
 # WAS
-TODO: Write a project description
+
+__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using the new [Angular2]() within a [Webpack]() buldig environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather aaplication that uses the [Openweather API]().     
+
 
 ## Quick Start
 TODO: Describe the installation process
-Run the following commands in your terminal :
 
 ```bash
 $ npm install -g webpack webpack-dev-server karma-cli protractor typings typescript tslint
@@ -20,7 +21,7 @@ $ cd was
 $ npm install
 $ npm run start
 ```
-Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in `./src/app/app.ts`.
+Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in `./src/app/`
 
 [comment]: # (# Table of Contents)
 [comment]: # (* [File Structure](#file-structure)
@@ -87,7 +88,7 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 | Dependency                                         | Version | Install                       |
 | :------------------------------------------------- | :------ | :---------------------------- |
-| [Karma CLI](https://github.com/karma-runner/karma-cli) | 1.x.x   | `npm i karma-cli -g`          |
+| [Karma](https://github.com/karma-runner/karma-cli) | 1.x.x   | `npm i karma-cli -g`          |
 | [Protractor](http://www.protractortest.org)        | 3.x.x   | `npm i protractor -g`         |
 | [Tslint](https://palantir.github.io/tslint)        | 3.x.x   | `npm i tslint -g`             |
 | [TypeScript](http://www.typescriptlang.org)        | 1.8.x   | `npm i typescript -g`         |
