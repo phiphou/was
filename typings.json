@@ -3,6 +3,8 @@
     "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504",
     "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
     "lodash": "registry:dt/lodash#3.10.0+20160330154726",
-    "node": "registry:dt/node#6.0.0+20160613154055"
+    "node": "registry:dt/node#6.0.0+20160613154055",
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
+    "selenium-webdriver": "registry:dt/selenium-webdriver#2.44.0+20160317120654"
   }
 }
