@@ -62,7 +62,7 @@
   },
   "critics": {
     "wc": {
-      "limit": 250
+      "limit": 5000
     }
   }
 }
