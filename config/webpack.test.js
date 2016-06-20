@@ -6,8 +6,7 @@ module.exports = {
   devtool: 'inline-source-map',
   resolve: {
     extensions: ['', '.ts', '.js'],
-    root: path.resolve('src'),
-
+    root: path.resolve('src')
   },
   module: {
     preLoaders: [
@@ -23,8 +22,7 @@ module.exports = {
       //     // these packages have problems with their sourcemaps
       //     path.resolve('node_modules/rxjs'),
       //     path.resolve('node_modules/@angular')
-      //   ]
-      // }],
+      //   ]}],
     ],
     loaders: [{
       test: /\.ts$/,
@@ -41,16 +39,14 @@ module.exports = {
       exclude: [path.resolve('node_modules'), /\.(e2e)\.ts$/]
     }],
     postLoaders: [{
-        test: /\.(js|ts)$/,
-        loader: 'istanbul-instrumenter-loader',
-        include: path.resolve('src'),
-        exclude: [
-          /\.(e2e|spec)\.ts$/,
-          /node_modules/
-        ]
-      }
-
-    ]
+      test: /\.(js|ts)$/,
+      loader: 'istanbul-instrumenter-loader',
+      include: path.resolve('src'),
+      exclude: [
+        /\.(e2e|spec)\.ts$/,
+        /node_modules/
+      ]
+    }]
   },
   plugins: [],
   tslint: {

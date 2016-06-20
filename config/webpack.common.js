@@ -20,13 +20,22 @@ const METADATA = {
   port: 8080,
   baseUrl: '/'
 };
+
 module.exports = {
   metadata: METADATA,
+  /**
+   * Entry
+   * Reference: http://webpack.github.io/docs/configuration.html#entry
+   */
   entry: {
     'polyfills': './src/polyfills.ts',
-    'vendors': './src/vendors.ts',
+    'vendor': './src/vendors.ts',
     'app': './src/main.ts' // our angular app
   },
+  /**
+   * Resolve
+   * Reference: http://webpack.github.io/docs/configuration.html#resolve
+   */
   resolve: {
     //cache: false,
     root: path.resolve('.'),
@@ -44,6 +53,12 @@ module.exports = {
   module: {
     noParse: [/.+zone\.js\/dist\/.+/, /.+angular2\/bundles\/.+/, /angular2-polyfills\.js/],
     preLoaders: [],
+    /**
+     * Loaders
+     * Reference: http://webpack.github.io/docs/configuration.html#module-loaders
+     * List: http://webpack.github.io/docs/list-of-loaders.html
+     * This handles most of the magic responsible for converting modules
+     */
     loaders: [{
         test: /\.ts$/,
         loader: 'ts',
@@ -104,9 +119,19 @@ module.exports = {
     }),
     //new OccurenceOrderPlugin(true),
     new CommonsChunkPlugin({
-      name: ['rs',
+      name: ['vendor',
         'polyfills'
       ]
+    }),
+    // Copy assets from the public folder
+    // Reference: https://github.com/kevlened/copy-webpack-plugin
+    new CopyWebpackPlugin([{
+      from: path.resolve('src/public')
+    }], {
+      ignore: [{
+        glob: '**/*.db',
+        dot: true
+      }]
     }),
     // Inject script and link tags into html files
     // Reference: https://github.com/ampedandwired/html-webpack-plugin
