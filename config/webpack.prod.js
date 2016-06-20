@@ -27,10 +27,8 @@ module.exports = webpackMerge(commonConfig, {
   metadata: METADATA,
   debug: false,
   // devtool: 'source-map',
-  /**
-   * Output
-   * Reference: http://webpack.github.io/docs/configuration.html#output
-   */
+  // Output
+  // Reference: http://webpack.github.io/docs/configuration.html#output
   output: {
     path: path.resolve('./dist'),
     publicPath: '/',
@@ -42,13 +40,15 @@ module.exports = webpackMerge(commonConfig, {
     silent: true
   },
   plugins: [
+    // Handle webpack progress
+    // Reference: https://github.com/clessg/progress-bar-webpack-plugin
     new ProgressBarPlugin({
       format: 'build [:bar] ' + chalk.green.bold(':percent') + ' :msg ' + '(:elapseds)',
       // clear: true,
       width: ENV_TRAVIS ? 0 : 50 // Dont use ProgressBarPlugin if on TRAVIS to avoid "ugly reports"
     }),
-    // Reference: https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
     // Add banner to output files.
+    // Reference: https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
     new webpack.BannerPlugin(getBanner(), {
       raw: false,
       entryOnly: false
@@ -94,9 +94,7 @@ module.exports = webpackMerge(commonConfig, {
   }
 });
 
-/**
- * Generate banner text for Webpack banner"s plugin.
- */
+// Generate banner text for Webpack banner"s plugin.
 function getBanner() {
   var date = new Date();
   var month = date.getMonth() < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;

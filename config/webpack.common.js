@@ -14,13 +14,11 @@ const ENV_DEVELOPMENT = NODE_ENV === 'development' || !ENV_PRODUCTION;
 const ENV_TRAVIS = process.env.TRAVIS || false;
 const PORT = 8080;
 var isTest = process.env.npm_lifecycle_event === 'test' || process.env.npm_lifecycle_event === 'test-watch';
-
 const METADATA = {
   title: 'WAS',
   port: 8080,
   baseUrl: '/'
 };
-
 module.exports = {
   metadata: METADATA,
   /**
@@ -53,12 +51,6 @@ module.exports = {
   module: {
     noParse: [/.+zone\.js\/dist\/.+/, /.+angular2\/bundles\/.+/, /angular2-polyfills\.js/],
     preLoaders: [],
-    /**
-     * Loaders
-     * Reference: http://webpack.github.io/docs/configuration.html#module-loaders
-     * List: http://webpack.github.io/docs/list-of-loaders.html
-     * This handles most of the magic responsible for converting modules
-     */
     loaders: [{
         test: /\.ts$/,
         loader: 'ts',
@@ -83,7 +75,6 @@ module.exports = {
       },
       // Support for CSS as raw text
       // use 'null' loader in test mode (https://github.com/webpack/null-loader)
-      // all css in src/style will be bundled in an external css file
       {
         test: /\.css$/,
         exclude: path.resolve('src/app'),
@@ -91,7 +82,6 @@ module.exports = {
       },
       // support for .scss files
       // use 'null' loader in test mode (https://github.com/webpack/null-loader)
-      // all css in src/style will be bundled in an external css file
       {
         test: /\.(scss|sass)$/,
         exclude: path.resolve('src/app'),
@@ -119,9 +109,7 @@ module.exports = {
     }),
     //new OccurenceOrderPlugin(true),
     new CommonsChunkPlugin({
-      name: ['vendor',
-        'polyfills'
-      ]
+      name: ['vendor', 'polyfills']
     }),
     // Copy assets from the public folder
     // Reference: https://github.com/kevlened/copy-webpack-plugin
@@ -142,13 +130,11 @@ module.exports = {
     }),
     // Extract css files
     // Reference: https://github.com/webpack/extract-text-webpack-plugin
-    // Disabled when in test mode or not in build mode
     new ExtractTextPlugin('css/[name]-[hash:7].css')
   ],
   /**
    * Sass
    * Reference: https://github.com/jtangelder/sass-loader
-   * Transforms .scss files to .css
    */
   sassLoader: {
     includePaths: [path.resolve(__dirname, "../node_modules/foundation-sites/scss")]
