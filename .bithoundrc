@@ -59,5 +59,10 @@
       "@angular2-material/core",
       "@angular/compiler"
     ]
+  },
+  "critics": {
+    "wc": {
+      "limit": 250
+    }
   }
 }
