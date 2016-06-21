@@ -8,11 +8,9 @@
 
 # WAS
 
-__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using the new [Angular2]() within a [Webpack]() buldig environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather aaplication that uses the [Openweather API]().     
-
+__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using the new [Angular2]() within a [Webpack]() building environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather application that uses the [Openweather API]().     
 
 ## Quick Start
-TODO: Describe the installation process
 
 ```bash
 $ npm install -g webpack webpack-dev-server karma-cli protractor typings typescript tslint
@@ -23,12 +21,18 @@ $ npm run start
 ```
 Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in `./src/app/`
 
-## Table of Contents
+## Table of contents
  * [Global dependencies](#global-dependencies)
      * [build dependencies](#build-dependencies)
      * [dev dependencies](#dev-dependencies)
  * [Install](#install)
  * [Usage](#usage)
+     * [Development](#start-developing)
+     * [Building](#building)
+     * [Testing](#testing)
+         * [Unit-Tests](#unit-tests)
+         * [End-to-end](#end-to-end)
+         * [Code coverage](#code-coverage)
  * [License](#license)
 
 [comment]: # (## File Structure)
@@ -62,9 +66,7 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 [comment]: # ( │       ├──robots.txt         * for search engines to crawl your website)
 [comment]: # ( │       └──human.txt          * for humans to know who the developers are)
 [comment]: # ( │)
-[comment]: # ( │)
 [comment]: # ( ├──tslint.json                * typescript lint config)
-[comment]: # ( ├──typedoc.json               * typescript documentation generator)
 [comment]: # ( ├──tsconfig.json              * config that webpack uses for typescript)
 [comment]: # ( ├──typings.json               * our typings manager)
 [comment]: # ( └──package.json               * what npm uses to manage it's dependencies)
@@ -72,7 +74,7 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 ## Global dependencies
 
-Before installing the application, you have to install some global dépendencies.
+Before installing the application, you have to install some global dependencies.
 
 #### Build dependencies
 
