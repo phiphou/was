@@ -10,7 +10,7 @@ import '@angular/router-deprecated';
 // import 'rxjs';
 import 'rxjs/add/operator/map';
 
-require('script!../node_modules/jquery/dist/jquery.min.js');
+import 'script!../node_modules/jquery/dist/jquery.min.js';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 // import 'jquery';
