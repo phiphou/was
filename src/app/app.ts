@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
 
   ngAfterViewInit() {
     console.log('jQuery version: ', $().jquery);
+    $(document).foundation;
     window.onscroll = function() {
       if (document.body.scrollTop > document.getElementById('heightTest').clientHeight) {
         document.querySelector('.menu2').classList.add('fixed');

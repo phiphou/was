@@ -95,11 +95,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
-    }),
+    // new webpack.ProvidePlugin({
+    //   $: "jquery",
+    //   jQuery: "jquery",
+    //   "window.jQuery": "jquery"
+    // }),
     // // Define env variables to help with builds
     // // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     //new OccurenceOrderPlugin(true),

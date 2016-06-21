@@ -9,9 +9,11 @@ import '@angular/router-deprecated';
 // RxJS
 // import 'rxjs';
 import 'rxjs/add/operator/map';
+
+require('script!../node_modules/jquery/dist/jquery.min.js');
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
-import 'jquery';
+// import 'jquery';
 import 'foundation-sites/dist/plugins/foundation.core';
 import 'foundation-sites/dist/plugins/foundation.util.mediaQuery';
 import 'foundation-sites/dist/plugins/foundation.util.triggers';
