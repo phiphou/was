@@ -5,10 +5,8 @@
     &nbsp;searching weather data for {{weatherService.city.name}}
   </h6>
   <div style="display:flex">
-    <h3 (click)="updateTemp()" *ngIf="!weatherService.pending && !weatherService.error">{{weatherService.city.name}}</h3>
-    <a *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
-      <img src="img/osm_icon.png" class="osm_link_icon">
-    </a>
+    <!-- <h3 (click)="updateTemp()" *ngIf="!weatherService.pending && !weatherService.error">{{weatherService.city.name}}</h3> -->
+
   </div>
 
   <div *ngIf="weatherService.error && !weatherService.pending" class="callout alert" data-closable>
@@ -17,12 +15,17 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <weather-input (cityChangedEvent)="cityChanged($event)"></weather-input>
-  <div class="unit_switcher_cont">
+<div id='city_cont'>
+  <a class="flex-item" id="osm_link" *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
+    <img src="img/osm_icon.png" class="osm_link_icon">
+  </a>
+  <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
+<div class="unit_switcher_cont flex-item">
     <div class="unit_switcher_label">C</div>
     <md-slide-toggle (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
     <div class="unit_switcher_label">F</div>
   </div>
+</div>
   <BR>
   <ul>
     <li class="weather" *ngFor="let weather of weatherService.weather">

@@ -2,14 +2,20 @@ import {Component, Output, EventEmitter} from '@angular/core';
 import {FORM_DIRECTIVES} from '@angular/common';
 import {City} from './City';
 import {ICity} from './ICity';
+import {MdInput} from '@angular2-material/input';
+import {WeatherService} from './weather.service';
 
 @Component({
   selector: 'weather-input',
-  directives: [FORM_DIRECTIVES],
-  template: `<form (ngSubmit)="submit(city)">
-  <input type="text" class="form-control form-control-lg"
-  placeholder="enter a city and press enter" [(ngModel)]="city.name">
-  </form>`
+  directives: [FORM_DIRECTIVES,MdInput],
+  template: `<form (ngSubmit)="submit(city)" autocomplete="off">
+  <md-input
+            placeholder="Enter a city and press enter"
+            [value]="weatherService.city != null ? weatherService.city.name: ''"
+            (input)="city.name = $event.target.value"
+            autofocus>
+          </md-input>
+        </form>`
 })
 
 export class WeatherInputComponent {
@@ -17,14 +23,14 @@ export class WeatherInputComponent {
   @Output()
   cityChangedEvent: EventEmitter<City>;
 
-  city: ICity = new City();
+  city: ICity = this.weatherService.city;
 
-  constructor() {
+  constructor(private weatherService: WeatherService) {
     this.cityChangedEvent = new EventEmitter<City>();
   }
 
   submit(city): void {
     this.cityChangedEvent.emit(city);
-    this.city = new City();
+    //this.city = new City();
   }
 }

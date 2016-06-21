@@ -45,7 +45,7 @@ export class WeatherService {
 
   parseWeather(data: any) {
     if (data.cod !== undefined) {
-      if (data.cod === '404') {
+      if (data.cod === '404' || data.city === null) {
         this.errMsg = 'City Not found';
         this.city = null;
         this.error = true;

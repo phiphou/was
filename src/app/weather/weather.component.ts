@@ -12,7 +12,7 @@ import {MdSlideToggle} from '@angular2-material/slide-toggle';
 
 @Component({
   selector: 'weather',
-  providers: [HTTP_PROVIDERS, Settings],
+  providers: [HTTP_PROVIDERS, Settings,WeatherService],
   pipes: [DateConvertPipe, TempConvertPipe],
   directives: [NgFor, WeatherInputComponent,MdSlideToggle],
   template: require('./weather.template.html')
@@ -20,7 +20,7 @@ import {MdSlideToggle} from '@angular2-material/slide-toggle';
 
 export class WeatherComponent {
 
-  isFarenheit: boolean = Settings.getInstance().isTimeToRefesh();
+  isFarenheit: boolean = Settings.getInstance().isFarenheit();
   singleton: Settings;
   weather: any[] = null;
   currentCity: ICity = new City('ozoir');

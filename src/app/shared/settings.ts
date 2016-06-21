@@ -1,7 +1,7 @@
 export class Settings {
   static instance: Settings;
   static isCreating: Boolean = false;
-  private _isTimeToRefesh: boolean = false;
+  private _isFarenheit: boolean = false;
 
   static getInstance() {
     if (Settings.instance == null) {
@@ -18,12 +18,12 @@ export class Settings {
     }
   }
 
-  setIsTimeToRefesh(value: boolean) {
-    this._isTimeToRefesh = value;
+  setIsFarenheit(value: boolean) {
+    this._isFarenheit = value;
   }
 
-  isTimeToRefesh() {
-    return this._isTimeToRefesh;
+  isFarenheit() {
+    return this._isFarenheit;
   }
 
 }
