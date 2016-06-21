@@ -43,6 +43,7 @@
     "@angular/router-deprecated": "2.0.0-rc.2",
     "@angular2-material/core": "2.0.0-alpha.5-2",
     "@angular2-material/slide-toggle": "2.0.0-alpha.5-2",
+    "@angular2-material/input": "2.0.0-alpha.5-2",
     "es6-shim": "^0.35.1",
     "font-awesome": "^4.6.3",
     "foundation-sites": "^6.2.3",
