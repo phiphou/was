@@ -102,11 +102,6 @@ module.exports = {
     }),
     // // Define env variables to help with builds
     // // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-    new DefinePlugin({
-      'process.env': {
-        ENV: JSON.stringify(NODE_ENV)
-      }
-    }),
     //new OccurenceOrderPlugin(true),
     new CommonsChunkPlugin({
       name: ['vendor', 'polyfills']

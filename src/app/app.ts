@@ -3,8 +3,10 @@ import {RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular
 import {TodoComponent} from './todo/todo.component';
 import {WeatherComponent} from './weather/weather.component';
 
+declare let $;
+
 import '../style/style.scss';
-let $ = require('jquery');
+
 
 @Component({
   selector: 'app',

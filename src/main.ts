@@ -7,7 +7,8 @@ import {HTTP_PROVIDERS} from '@angular/http';
 
 const ENV_PROVIDERS = [];
 // depending on the env mode, enable prod mode or add debugging modules
-if (process.env.ENV === 'build') {
+
+if (process.env.ENV === 'production') {
   enableProdMode();
 } else {
   ENV_PROVIDERS.push(ELEMENT_PROBE_PROVIDERS);

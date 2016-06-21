@@ -40,6 +40,16 @@ module.exports = webpackMerge(commonConfig, {
     silent: true
   },
   plugins: [
+    // new webpack.ProvidePlugin({
+    //   $: "jquery",
+    //   jQuery: "jquery",
+    //   "window.jQuery": "jquery"
+    // }),
+    new DefinePlugin({
+      'process.env': {
+        ENV: JSON.stringify(NODE_ENV)
+      }
+    }),
     // Handle webpack progress
     // Reference: https://github.com/clessg/progress-bar-webpack-plugin
     new ProgressBarPlugin({
@@ -96,6 +106,7 @@ module.exports = webpackMerge(commonConfig, {
 
 // Generate banner text for Webpack banner"s plugin.
 function getBanner() {
+  console.log(NODE_ENV);
   var date = new Date();
   var month = date.getMonth() < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
   var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
