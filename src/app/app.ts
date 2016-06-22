@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router-deprecated';
 import {TodoComponent} from './todo/todo.component';
 import {WeatherComponent} from './weather/weather.component';
-
+//import 'jquery';
 declare let $;
 
 import '../style/style.scss';

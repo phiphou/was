@@ -45,6 +45,7 @@ module.exports = webpackMerge(commonConfig, {
     //   jQuery: "jquery",
     //   "window.jQuery": "jquery"
     // }),
+
     new DefinePlugin({
       'process.env': {
         ENV: JSON.stringify(NODE_ENV)
@@ -57,6 +58,7 @@ module.exports = webpackMerge(commonConfig, {
       // clear: true,
       width: ENV_TRAVIS ? 0 : 50 // Dont use ProgressBarPlugin if on TRAVIS to avoid "ugly reports"
     }),
+  
     // Add banner to output files.
     // Reference: https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
     new webpack.BannerPlugin(getBanner(), {
