@@ -94,7 +94,7 @@ module.exports = {
       }, {
         test: /jquery\.js/,
         loader: 'null-loader',
-       exclude: path.resolve('node_modules/foundation-sites/')
+        exclude: path.resolve('node_modules/foundation-sites/')
       },
     ]
   },
