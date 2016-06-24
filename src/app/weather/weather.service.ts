@@ -1,6 +1,5 @@
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/delay';
-//import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
 import {Http, URLSearchParams, Response} from '@angular/http';
 import {ICity} from './ICity';
@@ -10,7 +9,6 @@ import {API_CONFIG} from '../shared/config';
 
 @Injectable()
 export class WeatherService {
-
   public weather: Object[] = null;
   public city: ICity;
   public pending: boolean = false;
@@ -52,22 +50,10 @@ export class WeatherService {
       } else {
         this.city = new City(data.city.name, data.city.id, data.city.coord);
         this.weather = data.list.map((item: any) => {
-          let weather: Weather = new Weather(item.dt, item.weather[0].description, item.weather[0].icon, item.temp
-            //, this.toFarenheit(item.temp)
-          );
-          /* item.icon = item.weather[0].icon;
-           item.description = item.weather[0].description;
-           item.tempF = this.toFarenheit(item.temp);*/
+          let weather: Weather = new Weather(item.dt, item.weather[0].description, item.weather[0].icon, item.temp);
           return weather;
         });
       }
     }
   }
-
-  // toFarenheit(obj: any): Object {
-  //   var o: Object = new Object();
-  //   for (var key in obj)
-  //     o[key] = (obj[key] * 1.8) + 32;
-  //   return o;
-  // }
 }

@@ -1,31 +1,25 @@
 <div class="row content-section">
-  <!-- <h1 (click)="updateTemp()">BOB {{weatherService.weather}}</h1> -->
   <h6 *ngIf="weatherService.pending">
     <i class="fa fa-spinner fa-spin"></i>
     &nbsp;searching weather data for {{weatherService.city.name}}
   </h6>
-  <div style="display:flex">
-    <!-- <h3 (click)="updateTemp()" *ngIf="!weatherService.pending && !weatherService.error">{{weatherService.city.name}}</h3> -->
-
-  </div>
-
   <div *ngIf="weatherService.error && !weatherService.pending" class="callout alert" data-closable>
     {{weatherService.errMsg}}
     <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-<div id='city_cont'>
-  <a class="flex-item" id="osm_link" *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
-    <img src="img/osm_icon.png" class="osm_link_icon">
-  </a>
-  <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
-<div class="unit_switcher_cont flex-item">
-    <div class="unit_switcher_label">C</div>
-    <md-slide-toggle (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
-    <div class="unit_switcher_label">F</div>
+  <div id='city_cont'>
+    <a class="flex-item" id="osm_link" *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
+      <img src="img/osm_icon.png" class="osm_link_icon">
+    </a>
+    <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
+    <div class="unit_switcher_cont flex-item">
+      <div class="unit_switcher_label">C</div>
+      <md-slide-toggle (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
+      <div class="unit_switcher_label">F</div>
+    </div>
   </div>
-</div>
   <BR>
   <ul>
     <li class="weather" *ngFor="let weather of weatherService.weather">

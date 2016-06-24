@@ -18,11 +18,11 @@ export class Settings {
     }
   }
 
-  setIsFarenheit(value: boolean) {
+  set isFarenheit(value: boolean) {
     this._isFarenheit = value;
   }
 
-  isFarenheit() {
+  get isFarenheit(): boolean {
     return this._isFarenheit;
   }
 

@@ -1,5 +1,4 @@
 export class Weather {
-
   constructor(
     public dt: string,
     public description: string,

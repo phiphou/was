@@ -20,13 +20,13 @@ import {MdSlideToggle} from '@angular2-material/slide-toggle';
 
 export class WeatherComponent implements OnInit {
 
-  isFarenheit: boolean = Settings.getInstance().isFarenheit();
+  isFarenheit: boolean = Settings.getInstance().isFarenheit;
   singleton: Settings;
   weather: any[] = null;
   currentCity: ICity = new City('ozoir');
 
   ngOnInit() {
-    console.log('Hello weather');
+    //console.log('Hello weather');
   }
 
   cityChanged(city) {
@@ -34,7 +34,6 @@ export class WeatherComponent implements OnInit {
   }
 
   updateTemp(): void {
-    //this.singleton.setIsTimeToRefesh(!this.singleton.isTimeToRefesh())
     this.isFarenheit = !this.isFarenheit;
   }
   searchForWeather(city: ICity = this.currentCity) {
@@ -42,7 +41,6 @@ export class WeatherComponent implements OnInit {
   }
 
   constructor(private weatherService: WeatherService) {
-    //this.singleton = Settings.getInstance();
     this.searchForWeather(this.currentCity);
   }
 }
