@@ -14,6 +14,7 @@ console.log('`About` component loaded asynchronously');
 })
 export class About {
 
+
   ngOnInit() {
     console.log('hello `About` component');
     // static data that is bundled

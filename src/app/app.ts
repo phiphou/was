@@ -1,32 +1,23 @@
 import {Component, OnInit} from '@angular/core';
-import {RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router-deprecated';
-import {WeatherComponent} from './weather/weather.component';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 //import 'jquery';
 declare let $;
 
 import '../style/style.scss';
 
-
 @Component({
   selector: 'app',
-  providers: [ROUTER_PROVIDERS/* Title*/],
   directives: [ROUTER_DIRECTIVES],
   template: require('./app.html')
 })
-
-@RouteConfig([
-  { path: '/weather', name: 'Weather', component: WeatherComponent, useAsDefault: true },
-  { path: '/about', name: 'About', loader: () => require('es6-promise?global,about!./about/about.component.async')('About') }
-])
 export class AppComponent implements OnInit {
-  constructor(router: Router/*, title: Title*/) {
-
-    router.subscribe((url) => { //fires on every URL change
-      // _.mixin({capitalize: function(string) {
-      //     return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
-      //   }});
-      //title.setTitle(_.capitalize(url));
-    });
+  constructor() {
+    //router.subscribe((url) => { //fires on every URL change
+    // _.mixin({capitalize: function(string) {
+    //     return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+    //   }});
+    //title.setTitle(_.capitalize(url));
+    //});
   }
 
   ngOnInit() {
@@ -34,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-     console.log('jQuery version: ', $().jquery);
+    console.log('jQuery version: ', $().jquery);
     // $(document).foundation;
     // window.onscroll = function() {
     //   if (document.body.scrollTop > document.getElementById('heightTest').clientHeight) {
