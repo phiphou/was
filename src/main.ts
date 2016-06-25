@@ -1,7 +1,6 @@
 import {enableProdMode} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {ELEMENT_PROBE_PROVIDERS} from '@angular/platform-browser';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {HTTP_PROVIDERS} from '@angular/http';
 import { APP_ROUTER_PROVIDERS } from './app/app.routes';
 
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     ...HTTP_PROVIDERS,
     APP_ROUTER_PROVIDERS,
     ...ENV_PROVIDERS
-    , { provide: LocationStrategy, useClass: HashLocationStrategy } // use #/ routes, remove this for HTML5 mode
+    // , { provide: LocationStrategy, useClass: HashLocationStrategy } // use #/ routes, remove this for HTML5 mode
   ])
-  .catch(err => console.error(err));
+    .catch(err => console.error(err));
 });
