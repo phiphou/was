@@ -10,7 +10,7 @@ describe('App', function() {
 
   it('should go to about', function() {
     element(by.id('aboutLink')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://127.0.0.1:8080/about');
+    expect(browser.getCurrentUrl()).toEqual('http://127.0.0.1:8080/About');
     //browser.sleep(2000);
     // element(by.css('.about_title')).getText().then(function(texts) {
     //       console.log(texts);
