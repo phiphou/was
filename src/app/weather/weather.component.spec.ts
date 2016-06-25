@@ -17,7 +17,8 @@ describe('Testing WeatherComponent', () => {
   it('should build', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
     return tcb.createAsync(WeatherComponent)
       .then((fixture) => {
-        //fixture.detectChanges();
+        fixture.detectChanges();
+        console.log(fixture);
         expect(fixture).not.toBeUndefined();
       });
   }));

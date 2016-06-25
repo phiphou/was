@@ -26,7 +26,7 @@ export class WeatherComponent implements OnInit {
   currentCity: ICity = new City('ozoir');
 
   ngOnInit() {
-    //console.log('Hello weather');
+    console.log('Hello weather');
   }
 
   cityChanged(city) {
