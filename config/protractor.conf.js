@@ -1,4 +1,4 @@
-var conf = require("./webpack.common.js");
+var conf = require("./webpack/webpack.common.js");
 
 exports.config = {
   baseUrl: 'http://127.0.0.1:'+conf.metadata.port ,

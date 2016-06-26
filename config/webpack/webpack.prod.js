@@ -9,7 +9,7 @@ const ProvidePlugin = webpack.ProvidePlugin;
 const DefinePlugin = webpack.DefinePlugin;
 const path = require('path');
 const chalk = require('chalk');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 // const WebpackMd5Hash = require('webpack-md5-hash');
 const NODE_ENV = process.env.NODE_ENV;
 const ENV_PRODUCTION = NODE_ENV === 'production';
@@ -58,7 +58,7 @@ module.exports = webpackMerge(commonConfig, {
       // clear: true,
       width: ENV_TRAVIS ? 0 : 50 // Dont use ProgressBarPlugin if on TRAVIS to avoid "ugly reports"
     }),
-  
+
     // Add banner to output files.
     // Reference: https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
     new webpack.BannerPlugin(getBanner(), {

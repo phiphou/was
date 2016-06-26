@@ -15,7 +15,7 @@ module.exports = config => {
         type: 'html'
       }]
     },
-    webpack: require('./webpack.test.js'),
+    webpack: require('./webpack/webpack.test.js'),
     webpackServer: {
       noInfo: true
     },
