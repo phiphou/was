@@ -26,15 +26,15 @@ export class AppComponent implements OnInit {
 
   ngAfterViewInit() {
     console.log('jQuery version: ', $().jquery);
-    // $(document).foundation;
-    // window.onscroll = function() {
-    //   if (document.body.scrollTop > document.getElementById('heightTest').clientHeight) {
-    //     document.querySelector('.menu2').classList.add('fixed');
-    //     document.querySelector('.cont').classList.add('fixed2');
-    //   } else {
-    //     document.querySelector('.menu2').classList.remove('fixed');
-    //     document.querySelector('.cont').classList.remove('fixed2');
-    //   }
-    // };
+    $(document).foundation;
+    window.onscroll = function() {
+      if (document.body.scrollTop > document.getElementById('heightTest').clientHeight) {
+        document.querySelector('.menu2').classList.add('fixed');
+        document.querySelector('.cont').classList.add('fixed2');
+      } else {
+        document.querySelector('.menu2').classList.remove('fixed');
+        document.querySelector('.cont').classList.remove('fixed2');
+      }
+    };
   }
 }

@@ -9,13 +9,11 @@ import {WeatherService} from './weather.service';
   selector: 'weather-input',
   directives: [FORM_DIRECTIVES,MdInput],
   template: `<form (ngSubmit)="submit(city)" autocomplete="off">
-  <md-input
-            placeholder="Enter a city and press enter"
-            [value]="weatherService.city != null ? weatherService.city.name: ''"
-            (input)="city.name = $event.target.value"
-            autofocus>
-          </md-input>
-        </form>`
+  <md-input placeholder="Enter a city and press enter"
+      [value]="weatherService.city != null ? weatherService.city.name: ''"
+      (input)="city.name = $event.target.value" autofocus>
+    </md-input>
+  </form>`
 })
 
 export class WeatherInputComponent {
