@@ -10,7 +10,7 @@ export const routes: RouterConfig = [
 ];
 
 export const asyncRoutes: AsyncRoutes = {
-  'About': require('es6-promise?,About!./about/about.component.async')
+  'About': require('es6-promise-loader?,About!./about/about.component.async')
 };
 // // Optimizations for initial loads
 // // An array of callbacks to be invoked after bootstrap to prefetch async routes
