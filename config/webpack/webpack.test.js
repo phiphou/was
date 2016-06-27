@@ -37,8 +37,7 @@ module.exports = {
         ]
       },
       exclude: [path.resolve('node_modules'), /\.(e2e)\.ts$/]
-    },
-    {
+    }, {
       test: /\.html$/,
       loader: 'raw'
     }],

@@ -91,8 +91,8 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw'
-       }
-//, {
+      }
+      //, {
       //   test: /jquery\.js/,
       //   loader: 'null-loader',
       //   exclude: path.resolve('node_modules/foundation-sites/')
