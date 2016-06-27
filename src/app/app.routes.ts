@@ -3,10 +3,10 @@ import { WeatherComponent } from './weather/weather.component';
 import { provideWebpack } from '../../config/webpack/webpackAsync';
 
 export const routes: RouterConfig = [
+  //{ path: '', component: WeatherComponent },
   { path: '', component: WeatherComponent },
   { path: 'Weather', component: WeatherComponent },
-  { path: 'About', component: 'About' },
-  { path: '**', component: WeatherComponent }
+  { path: 'About', component: 'About' }
 ];
 
 export const asyncRoutes: AsyncRoutes = {

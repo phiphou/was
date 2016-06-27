@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 //import 'jquery';
 declare let $;
 
@@ -8,6 +8,7 @@ import '../style/style.scss';
 @Component({
   selector: 'app',
   directives: [ROUTER_DIRECTIVES],
+  encapsulation: ViewEncapsulation.None,
   template: require('./app.html')
 })
 export class AppComponent implements OnInit {
