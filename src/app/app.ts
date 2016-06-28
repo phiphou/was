@@ -1,6 +1,7 @@
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
+import { Router } from '@angular/router';
 
 import '../style/style.scss';
 
@@ -15,12 +16,13 @@ declare let $;
 })
 
 export class AppComponent implements OnInit {
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private router: Router) {
     let userLang = navigator.language.split('-')[0];
     userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
 
     // this trigger the use of the french or english language after setting the translations
     translate.use(userLang);
+    router.navigate(['Weather']);
   }
 
   ngOnInit() {

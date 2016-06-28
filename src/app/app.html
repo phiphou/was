@@ -9,11 +9,10 @@
 
     <div class="top-bar row">
 
-
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li [routerLinkActive]="['active']"><a [routerLink]="['/']"><i class="fa fa-sun-o"></i>{{ 'WEATHER' | translate }}</a></li>
-          <li [routerLinkActive]="['active']"><a id="aboutLink" [routerLink]="['/About']"><i class="fa fa-question-circle"></i>{{ 'ABOUT' | translate }}</a></li>
+          <li><a [routerLinkActive]="['active']" [routerLink]="['/Weather']"><i class="fa fa-sun-o"></i>{{ 'WEATHER' | translate }}</a></li>
+          <li><a [routerLinkActive]="['active']" id="aboutLink" [routerLink]="['/About']"><i class="fa fa-question-circle"></i>{{ 'ABOUT' | translate }}</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
