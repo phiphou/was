@@ -92,18 +92,10 @@ module.exports = {
         test: /\.html$/,
         loader: 'raw'
       }
-      //, {
-      //   test: /jquery\.js/,
-      //   loader: 'null-loader',
-      //   exclude: path.resolve('node_modules/foundation-sites/')
-      // },
     ]
   },
   plugins: [
-
-    // // Define env variables to help with builds
-    // // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-    //new OccurenceOrderPlugin(true),
+    new OccurenceOrderPlugin(true),
     new CommonsChunkPlugin({
       name: ['vendor', 'polyfills']
     }),
@@ -117,6 +109,8 @@ module.exports = {
         dot: true
       }]
     }),
+    // // Define env variables to help with builds
+    // // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",

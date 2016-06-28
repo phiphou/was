@@ -3,8 +3,7 @@ var conf = require("./webpack.prod.js");
 var ora = require('ora');
 /**
  * Webpack
- * Webpack API is used instead of the cmdline to avoid
- * bad formated output.
+ * Webpack API is used instead of the cmdline to avoid bad formated output.
  * Reference: https://webpack.github.io/docs/node.js-api.html#stats-tojson
  */
 var spinner = ora('building...');

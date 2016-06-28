@@ -1,9 +1,8 @@
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-//import 'jquery';
-declare let $;
-
 import '../style/style.scss';
+
+declare let $;
 
 @Component({
   selector: 'app',
@@ -11,14 +10,10 @@ import '../style/style.scss';
   encapsulation: ViewEncapsulation.None,
   template: require('./app.html')
 })
+
 export class AppComponent implements OnInit {
   constructor() {
-    //router.subscribe((url) => { //fires on every URL change
-    // _.mixin({capitalize: function(string) {
-    //     return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
-    //   }});
-    //title.setTitle(_.capitalize(url));
-    //});
+  //
   }
 
   ngOnInit() {

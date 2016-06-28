@@ -1,5 +1,4 @@
 // From https://github.com/AngularClass/webpack-toolkit/
-
 import { ComponentResolver, Injectable, Inject } from '@angular/core';
 import { RuntimeCompiler } from '@angular/compiler';
 

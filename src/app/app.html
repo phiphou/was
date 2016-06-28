@@ -7,24 +7,14 @@
   <div id="sticker" class="menu2">
     <div class="top-bar row">
       <div class="top-bar-left">
-
-
-          <!-- <ul class="nav navbar-nav">
-<li ><a [routerLink]="['/Weather']">Home</a></li>
-<li [routerLinkActive]="['active']"><a [routerLink]="['/About']">Projects</a></li>
-</ul> -->
-
-
-         <ul class="dropdown menu" data-dropdown-menu>
-          <!-- <li class="menu-text">
-                        My Site
-                    </li> -->
-
-
-<li [routerLinkActive]="['active']"><a [routerLink]="['/']">Home</a></li>
-<li [routerLinkActive]="['active']"><a [routerLink]="['/About']">About</a></li>
-
-      </ul>
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li [routerLinkActive]="['active']">
+            <a [routerLink]="['/Weather']"><i class="fa fa-sun-o"></i>Weather</a>
+          </li>
+          <li [routerLinkActive]="['active']">
+            <a id="aboutLink" [routerLink]="['/About']"><i class="fa fa-question-circle"></i>About</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

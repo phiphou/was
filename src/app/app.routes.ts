@@ -1,12 +1,23 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+import {Component} from '@angular/core';
+import { Router, provideRouter, RouterConfig } from '@angular/router';
 import { WeatherComponent } from './weather/weather.component';
 import { provideWebpack } from '../../config/webpack/webpackAsync';
+
+@Component({ template: `` })
+class DummyComponent {
+  constructor(private router: Router) {
+    this.router.navigate(['/Weather']);
+  }
+}
 
 export const routes: RouterConfig = [
   //{ path: '', component: WeatherComponent },
   { path: '', component: WeatherComponent },
-  { path: 'Weather', component: WeatherComponent },
-  { path: 'About', component: 'About' }
+ { path: 'Weather', component: WeatherComponent },
+ { path: 'About', component: 'About' }
+ // { path: '', component: DummyComponent },
+ //  { path: 'Weather', component: WeatherComponent },
+ //  { path: 'About', component: 'About' }
 ];
 
 export const asyncRoutes: AsyncRoutes = {
