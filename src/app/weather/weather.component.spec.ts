@@ -2,7 +2,9 @@ import { beforeEachProviders, describe, expect, inject, it} from '@angular/core/
 import {TestComponentBuilder} from '@angular/compiler/testing';
 import {WeatherComponent} from './weather.component';
 import {WeatherService} from './weather.service';
-import {HTTP_PROVIDERS} from '@angular/http';
+import {Http,HTTP_PROVIDERS} from '@angular/http';
+import {TranslateService,TranslateStaticLoader,TranslateLoader} from 'ng2-translate/ng2-translate';
+import {provide} from '@angular/core';
 
 describe('Testing WeatherComponent', () => {
   let initSpy;
@@ -11,7 +13,11 @@ describe('Testing WeatherComponent', () => {
   });
 
   beforeEachProviders(() => [
-    WeatherComponent, WeatherService, HTTP_PROVIDERS
+    WeatherComponent, WeatherService, HTTP_PROVIDERS, TranslateService,
+    provide(TranslateLoader, {
+      useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
+      deps: [Http]
+    })
   ]);
 
   it('should build', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
