@@ -3,17 +3,24 @@
     <H1 style="color: white; padding-left:30px">METEO</H1>
   </div>
 </div>
+
 <div>
   <div id="sticker" class="menu2">
+
     <div class="top-bar row">
+
+
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li [routerLinkActive]="['active']">
-            <a [routerLink]="['/Weather']"><i class="fa fa-sun-o"></i>Weather</a>
-          </li>
-          <li [routerLinkActive]="['active']">
-            <a id="aboutLink" [routerLink]="['/About']"><i class="fa fa-question-circle"></i>About</a>
-          </li>
+          <li [routerLinkActive]="['active']"><a [routerLink]="['/']"><i class="fa fa-sun-o"></i>{{ 'WEATHER' | translate }}</a></li>
+          <li [routerLinkActive]="['active']"><a id="aboutLink" [routerLink]="['/About']"><i class="fa fa-question-circle"></i>{{ 'ABOUT' | translate }}</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <select (change)="translate.use($event.target.value)">
+            <option *ngFor="#lang of ['fr', 'en']" [selected]="lang === translate.currentLang">{{lang}}</option>
+          </select>
         </ul>
       </div>
     </div>

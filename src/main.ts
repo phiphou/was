@@ -3,6 +3,7 @@ import {bootstrap} from '@angular/platform-browser-dynamic';
 import {ELEMENT_PROBE_PROVIDERS} from '@angular/platform-browser';
 import {HTTP_PROVIDERS} from '@angular/http';
 import { APP_ROUTER_PROVIDERS } from './app/app.routes';
+import { TRANSLATE_PROVIDERS} from 'ng2-translate/ng2-translate';
 
 const ENV_PROVIDERS = [];
 // depending on the env mode, enable prod mode or add debugging modules
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function main() {
     // These are dependencies of our App
     ...HTTP_PROVIDERS,
     APP_ROUTER_PROVIDERS,
-    ...ENV_PROVIDERS
+    ...ENV_PROVIDERS,
+    TRANSLATE_PROVIDERS
     // , { provide: LocationStrategy, useClass: HashLocationStrategy } // use #/ routes, remove this for HTML5 mode
   ])
     .catch(err => console.error(err));
