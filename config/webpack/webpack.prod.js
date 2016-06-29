@@ -1,6 +1,6 @@
 const webpack = require('webpack');
-const webpackMerge = require('webpack-merge'); // used to merge webpack configs
-const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const webpackMerge = require('webpack-merge');
+const commonConfig = require('./webpack.common.js');
 const DedupePlugin = webpack.optimize.DedupePlugin;
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -27,52 +27,39 @@ module.exports = webpackMerge(commonConfig, {
   metadata: METADATA,
   debug: false,
   // devtool: 'source-map',
-  // Output
   // Reference: http://webpack.github.io/docs/configuration.html#output
   output: {
     path: path.resolve('./dist'),
     publicPath: '/',
     filename: 'js/[name]-[hash:7].js',
     chunkFilename: 'js/[name].chunk-[hash:7].js'
-      // sourceMapFilename: '[name].[chunkhash].bundle.map'
+    // sourceMapFilename: '[name].[chunkhash].bundle.map'
   },
   ts: {
     silent: true
   },
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   $: "jquery",
-    //   jQuery: "jquery",
-    //   "window.jQuery": "jquery"
-    // }),
-
     new DefinePlugin({
       'process.env': {
         ENV: JSON.stringify(NODE_ENV)
       }
     }),
-    // Handle webpack progress
     // Reference: https://github.com/clessg/progress-bar-webpack-plugin
     new ProgressBarPlugin({
       format: 'build [:bar] ' + chalk.green.bold(':percent') + ' :msg ' + '(:elapseds)',
       // clear: true,
       width: ENV_TRAVIS ? 0 : 50 // Dont use ProgressBarPlugin if on TRAVIS to avoid "ugly reports"
     }),
-
-    // Add banner to output files.
     // Reference: https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
     new webpack.BannerPlugin(getBanner(), {
       raw: false,
       entryOnly: false
     }),
     // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
-    // Only emit files when there are no errors.
     new webpack.NoErrorsPlugin(),
     // Reference: http://webpack.github.io/docs/list-of-plugins.html#dedupeplugin
-    // Dedupe modules in the output.
     new webpack.optimize.DedupePlugin(),
     // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
-    // Minify all javascript, switch loaders to minimizing mode.
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
       compress: {
@@ -105,7 +92,6 @@ module.exports = webpackMerge(commonConfig, {
     customAttrAssign: [/\)?\]?=/]
   }
 });
-
 // Generate banner text for Webpack banner"s plugin.
 function getBanner() {
   console.log(NODE_ENV);

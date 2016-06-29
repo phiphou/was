@@ -2,8 +2,8 @@ import { beforeEachProviders, describe, expect, inject, it} from '@angular/core/
 import {TestComponentBuilder} from '@angular/compiler/testing';
 import {WeatherComponent} from './weather.component';
 import {WeatherService} from './weather.service';
-import {Http,HTTP_PROVIDERS} from '@angular/http';
-import {TranslateService,TranslateStaticLoader,TranslateLoader} from 'ng2-translate/ng2-translate';
+import {Http, HTTP_PROVIDERS} from '@angular/http';
+import {TranslateService, TranslateStaticLoader, TranslateLoader} from 'ng2-translate/ng2-translate';
 import {provide} from '@angular/core';
 
 describe('Testing WeatherComponent', () => {
@@ -15,7 +15,7 @@ describe('Testing WeatherComponent', () => {
   beforeEachProviders(() => [
     WeatherComponent, WeatherService, HTTP_PROVIDERS, TranslateService,
     provide(TranslateLoader, {
-      useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
+      useFactory: (http: Http) => new TranslateStaticLoader(http, '../public/i18n', '.json'),
       deps: [Http]
     })
   ]);

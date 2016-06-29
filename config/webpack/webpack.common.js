@@ -21,19 +21,13 @@ const METADATA = {
 };
 module.exports = {
   metadata: METADATA,
-  /**
-   * Entry
-   * Reference: http://webpack.github.io/docs/configuration.html#entry
-   */
+  // Reference: http://webpack.github.io/docs/configuration.html#entry
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendors.ts',
     'app': './src/main.ts' // our angular app
   },
-  /**
-   * Resolve
-   * Reference: http://webpack.github.io/docs/configuration.html#resolve
-   */
+  // Reference: http://webpack.github.io/docs/configuration.html#resolve
   resolve: {
     //cache: false,
     root: path.resolve('.'),
@@ -99,7 +93,6 @@ module.exports = {
     new CommonsChunkPlugin({
       name: ['vendor', 'polyfills']
     }),
-    // Copy assets from the public folder
     // Reference: https://github.com/kevlened/copy-webpack-plugin
     new CopyWebpackPlugin([{
       from: path.resolve('src/public')
@@ -109,28 +102,22 @@ module.exports = {
         dot: true
       }]
     }),
-    // // Define env variables to help with builds
     // // Reference: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    // Inject script and link tags into html files
     // Reference: https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       template: './src/public/index.html',
       inject: 'body',
       chunksSortMode: 'dependency'
     }),
-    // Extract css files
     // Reference: https://github.com/webpack/extract-text-webpack-plugin
     new ExtractTextPlugin('css/[name]-[hash:7].css')
   ],
-  /**
-   * Sass
-   * Reference: https://github.com/jtangelder/sass-loader
-   */
+  // Reference: https://github.com/jtangelder/sass-loader
   sassLoader: {
     includePaths: [path.resolve(__dirname, "../../node_modules/foundation-sites/scss")]
   }

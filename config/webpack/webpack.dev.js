@@ -1,5 +1,5 @@
-const webpackMerge = require('webpack-merge'); // used to merge webpack configs
-const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const webpackMerge = require('webpack-merge');
+const commonConfig = require('./webpack.common.js');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const WebpackBrowserPlugin = require('webpack-browser-plugin');
@@ -26,8 +26,7 @@ module.exports = webpackMerge(commonConfig, {
     chunkFilename: 'js/[name].chunk.js'
   },
   plugins: [
-    // If ENV_DEVELOPMENT, automatically open the browser.
-    // Reference: https://webpack.github.io/docs/list-of-plugins.html#webpackbrowserplugin
+    Reference: https://webpack.github.io/docs/list-of-plugins.html#webpackbrowserplugin
     new WebpackBrowserPlugin({
       browser: 'Chrome',
       port: METADATA.port
@@ -38,21 +37,14 @@ module.exports = webpackMerge(commonConfig, {
     failOnHint: false,
     resourcePath: 'src'
   },
-  /**
-   * PostCSS
-   * Reference: https://github.com/postcss/autoprefixer-core
-   * Add vendor prefixes to your css
-   */
+  // Reference: https://github.com/postcss/autoprefixer-core
   postcss: [
     autoprefixer({
       browsers: ['last 2 version']
     })
   ],
-  /**
-   * Dev server configuration
-   * Reference: http://webpack.github.io/docs/configuration.html#devserver
-   * Reference: http://webpack.github.io/docs/webpack-dev-server.html
-   */
+  // Reference: http://webpack.github.io/docs/configuration.html#devserver
+  // Reference: http://webpack.github.io/docs/webpack-dev-server.html
   devServer: {
     port: METADATA.port,
     host: METADATA.host,
