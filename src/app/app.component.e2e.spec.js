@@ -5,7 +5,7 @@ describe('App', function() {
   });
 
   it('should have a title', function() {
-    expect(browser.getTitle()).toEqual("Webpack Angular2 Sample");
+    expect(browser.getTitle()).toEqual("Weather");
   });
 
   it('should go to about', function() {
