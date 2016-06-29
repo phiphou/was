@@ -1,4 +1,5 @@
 {
   "WEATHER": "Météo",
-  "ABOUT": "A propos"
+  "ABOUT": "A propos",
+  "withSpan" : "Gagnez du temps et travaillez efficacement grâce à une solution basée sur <a href='http://webpack.github.io/'>Webpack</a>."
 }

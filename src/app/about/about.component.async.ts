@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe} from 'ng2-translate/ng2-translate';
 
 /*
  * We're loading this component asynchronously
@@ -10,6 +11,7 @@ console.log('`About` component loaded asynchronously');
 
 @Component({
   selector: 'about',
+  pipes: [TranslatePipe],
   template: require('./about.template.html')
 })
 export class About {

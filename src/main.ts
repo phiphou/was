@@ -5,6 +5,7 @@ import {HTTP_PROVIDERS} from '@angular/http';
 import { APP_ROUTER_PROVIDERS } from './app/app.routes';
 import { TRANSLATE_PROVIDERS} from 'ng2-translate/ng2-translate';
 import {AppComponent} from './app/app';
+import { Title } from '@angular/platform-browser';
 
 const ENV_PROVIDERS = [];
 
@@ -16,6 +17,7 @@ if (process.env.ENV === 'production') {
 
 document.addEventListener('DOMContentLoaded', function main() {
   return bootstrap(AppComponent, [
+    Title,
     ...HTTP_PROVIDERS,
     APP_ROUTER_PROVIDERS,
     ...ENV_PROVIDERS,

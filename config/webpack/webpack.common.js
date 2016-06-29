@@ -89,7 +89,7 @@ module.exports = {
     ]
   },
   plugins: [
-    //new OccurenceOrderPlugin(true),
+    new OccurenceOrderPlugin(true),
     new CommonsChunkPlugin({
       name: ['vendor', 'polyfills']
     }),
