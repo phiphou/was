@@ -26,7 +26,7 @@ module.exports = webpackMerge(commonConfig, {
     chunkFilename: 'js/[name].chunk.js'
   },
   plugins: [
-    Reference: https://webpack.github.io/docs/list-of-plugins.html#webpackbrowserplugin
+    // Reference: https://webpack.github.io/docs/list-of-plugins.html#webpackbrowserplugin
     new WebpackBrowserPlugin({
       browser: 'Chrome',
       port: METADATA.port
