@@ -1,6 +1,6 @@
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
+import {TranslateService, TranslatePipe, LangChangeEvent} from 'ng2-translate/ng2-translate';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title }     from '@angular/platform-browser';
 
@@ -25,6 +25,12 @@ export class AppComponent implements OnInit {
     });
     let userLang = navigator.language.split('-')[0];
     userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
+    translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      console.log(event);
+      document.querySelector('.en_flag').classList.add('lang_inactive');
+      document.querySelector('.fr_flag').classList.add('lang_inactive');
+      document.querySelector('.' + event.lang + '_flag').classList.remove('lang_inactive');
+    });
     translate.use(userLang);
     router.navigate(['Weather']);
   }
