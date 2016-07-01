@@ -3,7 +3,6 @@
     <i class="fa fa-spinner fa-spin"></i>
     &nbsp;searching weather data for {{weatherService.city.name}}
   </h6>
-{{translate.currentLang}}
   <div *ngIf="weatherService.error && !weatherService.pending" class="callout alert" data-closable>
     {{weatherService.errMsg}}
     <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
