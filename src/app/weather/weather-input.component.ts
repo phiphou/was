@@ -1,5 +1,4 @@
 import {Component, Output, EventEmitter} from '@angular/core';
-import {FORM_DIRECTIVES} from '@angular/common';
 import {City} from './City';
 import {ICity} from './ICity';
 import {MdInput} from '@angular2-material/input';
@@ -7,7 +6,7 @@ import {WeatherService} from './weather.service';
 
 @Component({
   selector: 'weather-input',
-  directives: [FORM_DIRECTIVES,MdInput],
+  directives: [MdInput],
   template: `<form (ngSubmit)="submit(city)" autocomplete="off">
   <md-input placeholder="Enter a city and press enter"
       [value]="weatherService.city != null ? weatherService.city.name: ''"

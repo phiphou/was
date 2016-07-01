@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
     let userLang = navigator.language.split('-')[0];
     userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
     translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      console.log(event);
       document.querySelector('.en_flag').classList.add('lang_inactive');
       document.querySelector('.fr_flag').classList.add('lang_inactive');
       document.querySelector('.' + event.lang + '_flag').classList.remove('lang_inactive');
