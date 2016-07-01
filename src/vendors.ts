@@ -8,10 +8,14 @@ import '@angular/http';
 import '@angular/router';
 // RxJS
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/delay';
+//import 'rxjs/add/operator/delay';
 // vendors
 import 'foundation-sites/dist/plugins/foundation.core';
 // import 'foundation-sites/dist/plugins/foundation.util.mediaQuery';
 import 'foundation-sites/dist/plugins/foundation.util.triggers';
+
 import '@angular2-material/input';
 import '@angular2-material/slide-toggle';
+
+import '@angular2-material/input';
+import 'ng2-translate/ng2-translate';

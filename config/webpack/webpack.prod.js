@@ -33,7 +33,7 @@ module.exports = webpackMerge(commonConfig, {
     publicPath: '/',
     filename: 'js/[name]-[hash:7].js',
     chunkFilename: 'js/[name].chunk-[hash:7].js'
-    // sourceMapFilename: '[name].[chunkhash].bundle.map'
+      // sourceMapFilename: '[name].[chunkhash].bundle.map'
   },
   ts: {
     silent: true
@@ -61,13 +61,18 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.optimize.DedupePlugin(),
     // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
     new webpack.optimize.UglifyJsPlugin({
-      mangle: true,
-      compress: {
-        dead_code: false, // eslint-disable-line camelcase
-        screw_ie8: false, // eslint-disable-line camelcase
+      beautify: false, //prod
+      mangle: {
+        screw_ie8: false,
         unused: true,
         warnings: false
-      }
+      }, //prod
+      compress: {
+        screw_ie8: false,
+        unused: true,
+        warnings: false
+      }, //prod
+      comments: false //prod
     }),
     new CompressionPlugin({
       test: /\.(css|html|js|map)$/,

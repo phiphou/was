@@ -1,5 +1,5 @@
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/delay';
+//import 'rxjs/add/operator/delay';
 import {Injectable} from '@angular/core';
 import {Http, URLSearchParams, Response} from '@angular/http';
 import {ICity} from './ICity';
@@ -32,7 +32,8 @@ export class WeatherService {
     params.set('units', 'metric');
     this._http.get(this.url + '/daily/', {
       search: params
-    }).delay(2000)
+    })
+      //.delay(2000)
       .map((res: Response) => res.json())
       .subscribe(
         (data: any) => { this.parseWeather(data); return this.weather; },

@@ -1,8 +1,7 @@
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import {TranslateService, TranslatePipe, LangChangeEvent} from 'ng2-translate/ng2-translate';
-import { Router, NavigationEnd } from '@angular/router';
-import { Title }     from '@angular/platform-browser';
+import { ROUTER_DIRECTIVES, Router, NavigationEnd } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import '../style/style.scss';
 
 declare let $;
