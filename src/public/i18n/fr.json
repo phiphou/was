@@ -1,8 +1,13 @@
 {
   "500": "Légères pluies",
   "501": "Pluies modérées",
+  "502": "Fortes pluies",
+  "503": "Très fortes précipitations",
   "800": "Ensoleillé",
+  "801": "Peu nuageux",
   "802": "Partiellement ensoleillé",
+  "803": "Nuageux",
+  "804": "Couvert",
   "WEATHER": "Météo",
   "ABOUT": "A propos",
   "withSpan": "Gagnez du temps et travaillez efficacement grâce à une solution basée sur <a href='http://webpack.github.io/'>Webpack</a>.",

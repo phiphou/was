@@ -1,8 +1,13 @@
 {
   "500": "Light rain",
   "501": "Moderate rain",
+  "502": "heavy intensity rain",
+  "503": "Very heavy rain",
   "800": "Clear sky",
+  "801": "Few clouds",
   "802": "Scattered clouds",
+  "803": "Broken clouds",
+  "804": "Overcast clouds",
   "WEATHER": "Weather",
   "ABOUT": "About",
   "withSpan": "A smart, <a href='http://webpack.github.io/'>Webpack</a>-based build system designed to save you time and energy.",

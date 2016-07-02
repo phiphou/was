@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
       document.querySelector('.en_flag').classList.add('lang_inactive');
       document.querySelector('.fr_flag').classList.add('lang_inactive');
       document.querySelector('.' + event.lang + '_flag').classList.remove('lang_inactive');
-console.log(event);
       Settings.getInstance().isFarenheit = (event.lang === 'en');
     });
     translate.use(userLang);
