@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { TranslateService, TranslatePipe, LangChangeEvent } from 'ng2-translate/ng2-translate';
 import { ROUTER_DIRECTIVES, Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import {Settings} from './shared/settings';
 import '../style/style.scss';
 
 declare let $;
@@ -9,6 +10,7 @@ declare let $;
 @Component({
   selector: 'app',
   directives: [ROUTER_DIRECTIVES],
+  providers: [Settings],
   pipes: [TranslatePipe],
   encapsulation: ViewEncapsulation.None,
   template: require('./app.html')
@@ -27,6 +29,8 @@ export class AppComponent implements OnInit {
       document.querySelector('.en_flag').classList.add('lang_inactive');
       document.querySelector('.fr_flag').classList.add('lang_inactive');
       document.querySelector('.' + event.lang + '_flag').classList.remove('lang_inactive');
+console.log(event);
+      Settings.getInstance().isFarenheit = (event.lang === 'en');
     });
     translate.use(userLang);
     router.navigate(['Weather']);

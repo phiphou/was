@@ -9,6 +9,7 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+
   <div id='city_cont'>
     <a class="flex-item" id="osm_link" *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
       <img src="img/osm_icon.png" class="osm_link_icon">
@@ -16,7 +17,7 @@
     <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
     <div class="unit_switcher_cont flex-item">
       <div class="unit_switcher_label">C</div>
-      <md-slide-toggle (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
+      <md-slide-toggle [checked]="isFarenheit" (click)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
       <div class="unit_switcher_label">F</div>
     </div>
   </div>
@@ -30,7 +31,7 @@
           <h3>{{weather.temp.day | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}}</h3>
           <h6 class="weather_alt_temp">{{weather.temp.min | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}} / {{weather.temp.max | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}}</h6>
         </div>
-        <div class="weather_desc">{{weather.description}}</div>
+        <div class="weather_desc">{{weather.id | translate}}</div>
       </div>
     </li>
   </ul>

@@ -1,7 +1,7 @@
 export class Weather {
   constructor(
     public dt: string,
-    public description: string,
+    public id: string,
     public icon: string,
     private temp: Object) { }
 

@@ -1,5 +1,5 @@
 import {HTTP_PROVIDERS} from '@angular/http';
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {NgFor} from '@angular/common';
 import {WeatherService} from './weather.service';
 import {ICity} from './ICity';
@@ -19,16 +19,10 @@ import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
   template: require('./weather.template.html')
 })
 
-export class WeatherComponent implements OnInit {
+export class WeatherComponent {
 
-  isFarenheit: boolean = Settings.getInstance().isFarenheit;
-  singleton: Settings;
   weather: any[] = null;
   currentCity: ICity = new City('ozoir');
-
-  ngOnInit() {
-    console.log('Hello weather');
-  }
 
   cityChanged(city) {
     this.weatherService.getWeather(city);
@@ -40,7 +34,12 @@ export class WeatherComponent implements OnInit {
   searchForWeather(city: ICity = this.currentCity) {
     this.weatherService.getWeather(this.currentCity);
   }
-
+  get isFarenheit() {
+    return Settings.getInstance().isFarenheit;
+  }
+  set isFarenheit(b: boolean) {
+    Settings.getInstance().isFarenheit = b;
+  }
   constructor(public translate: TranslateService, private weatherService: WeatherService) {
     this.searchForWeather(this.currentCity);
   }

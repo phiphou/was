@@ -28,7 +28,7 @@ export class WeatherService {
     let params: URLSearchParams = new URLSearchParams();
     params.set('appid', API_CONFIG.appId);
     params.set('q', city.name);
-    params.set('lang', 'fr');
+    params.set('lang', 'en');
     params.set('units', 'metric');
     this._http.get(this.url + '/daily/', {
       search: params
@@ -36,13 +36,14 @@ export class WeatherService {
       //.delay(2000)
       .map((res: Response) => res.json())
       .subscribe(
-        (data: any) => { this.parseWeather(data); return this.weather; },
-        error => console.log('Could not load todos.'),
-        () => this.pending = false
+      (data: any) => { this.parseWeather(data); return this.weather; },
+      error => console.log('Could not load todos.'),
+      () => this.pending = false
       );
   }
 
   parseWeather(data: any) {
+    console.log(data);
     if (data.cod !== undefined) {
       if (data.cod === '404' || data.city === null) {
         this.errMsg = 'City Not found';
@@ -51,7 +52,7 @@ export class WeatherService {
       } else {
         this.city = new City(data.city.name, data.city.id, data.city.coord);
         this.weather = data.list.map((item: any) => {
-          let weather: Weather = new Weather(item.dt, item.weather[0].description, item.weather[0].icon, item.temp);
+          let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon, item.temp);
           return weather;
         });
       }
