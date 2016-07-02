@@ -1,4 +1,4 @@
-import { beforeEachProviders, describe, expect, inject, it} from '@angular/core/testing';
+import {beforeEachProviders, describe, expect, inject, it} from '@angular/core/testing';
 import {TestComponentBuilder} from '@angular/compiler/testing';
 import {WeatherComponent} from './weather.component';
 import {WeatherService} from './weather.service';

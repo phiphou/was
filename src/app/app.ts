@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import {TranslateService, TranslatePipe, LangChangeEvent} from 'ng2-translate/ng2-translate';
+import { TranslateService, TranslatePipe, LangChangeEvent } from 'ng2-translate/ng2-translate';
 import { ROUTER_DIRECTIVES, Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import '../style/style.scss';

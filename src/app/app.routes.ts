@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { Router, provideRouter, RouterConfig } from '@angular/router';
-import { WeatherComponent } from './weather/weather.component';
-import { provideWebpack } from '../../config/webpack/webpackAsync';
+import {Component} from '@angular/core';
+import {Router, provideRouter, RouterConfig} from '@angular/router';
+import {WeatherComponent} from './weather/weather.component';
+import {provideWebpack} from '../../config/webpack/webpackAsync';
 
 @Component({ template: `` })
 class DummyComponent {
