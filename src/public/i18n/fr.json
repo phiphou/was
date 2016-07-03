@@ -8,10 +8,13 @@
   "802": "Partiellement ensoleillé",
   "803": "Nuageux",
   "804": "Couvert",
+  "T_UNIT": "°C",
   "WEATHER": "Météo",
   "ABOUT": "A propos",
-  "withSpan": "Gagnez du temps et travaillez efficacement grâce à une solution basée sur <a href='http://webpack.github.io/'>Webpack</a>.",
-  "FOUNDATION_SITES": "Un framework complet, intuitif et puissant pour un développement web rapide et facile. <a href='http://getbootstrap.com' class='text_link'>Plus d'infos »</a>",
-  "FONT_AWESOME": "La désormais célèbre police d'icône designées pour le Web. <a href='http://fontawesome.github.com/Font-Awesome' class='text_link'>Plus d'infos »</a>",
-  "SASS": "Le langage de feuille de style dynamique qui rend le CSS encore plus puissant. <a href='http://sass.org/' class='text_link'>Plus d'infos »</a>"
+  "MORE": "Plus d'infos »",
+  "WEBPACK": "Gagnez du temps et travaillez efficacement grâce à une solution basée sur Webpack.",
+  "FOUNDATION_SITES": "Un framework complet, intuitif et puissant pour un développement web rapide et facile.",
+  "FONT_AWESOME": "La désormais célèbre police d'icône designées pour le Web.",
+  "SASS": "Le langage de feuille de style dynamique qui rend le CSS encore plus puissant.",
+  "INTRO" : "Démarrez rapidement avec tout ce qu'il faut pour vous concentrer sur l'essentiel: l'application."
 }

@@ -36,11 +36,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('OnInit');
+    // console.log('OnInit');
   }
 
   ngAfterViewInit() {
-    console.log('jQuery version: ', $().jquery);
+    // console.log('jQuery version: ', $().jquery);
     $(document).foundation;
     window.onscroll = function() {
       if (document.body.scrollTop > document.getElementById('heightTest').clientHeight) {

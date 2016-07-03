@@ -8,10 +8,13 @@
   "802": "Scattered clouds",
   "803": "Broken clouds",
   "804": "Overcast clouds",
+  "T_UNIT": "°F",
   "WEATHER": "Weather",
   "ABOUT": "About",
-  "withSpan": "A smart, <a href='http://webpack.github.io/'>Webpack</a>-based build system designed to save you time and energy.",
-  "FOUNDATION_SITES": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.&nbsp;<a href='http://getbootstrap.com' class='text_link'>More »</a>",
-  "FONT_AWESOME": "The famous iconic font designed for qualtify web apps. <a href='http://fontawesome.github.com/Font-Awesome' class='text_link'>More »</a>",
-  "SASS": "The dynamic stylesheet language that extends CSS with efficiency. <a href='http://sass.org/' class='text_link'>More »</a>"
+  "MORE": "More »",
+  "WEBPACK": "A smart webpack based build system designed to save you time and energy.",
+  "FOUNDATION_SITES": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+  "FONT_AWESOME": "The famous iconic font designed for qualtify web apps.",
+  "SASS": "The dynamic stylesheet language that extends CSS with efficiency.",
+  "INTRO" : "Kickstarts your project quickly, with everything you need, so you can focus on what matters: your app."
 }

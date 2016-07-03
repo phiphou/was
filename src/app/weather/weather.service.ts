@@ -37,13 +37,12 @@ export class WeatherService {
       .map((res: Response) => res.json())
       .subscribe(
       (data: any) => { this.parseWeather(data); return this.weather; },
-      error => console.log('Could not load todos.'),
+      error => console.log('Could not load weather.'),
       () => this.pending = false
       );
   }
 
   parseWeather(data: any) {
-    console.log(data);
     if (data.cod !== undefined) {
       if (data.cod === '404' || data.city === null) {
         this.errMsg = 'City Not found';

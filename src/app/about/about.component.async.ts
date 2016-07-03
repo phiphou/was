@@ -6,9 +6,6 @@ import { TranslatePipe} from 'ng2-translate/ng2-translate';
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
-
-console.log('`About` component loaded asynchronously');
-
 @Component({
   selector: 'about',
   pipes: [TranslatePipe],
@@ -16,9 +13,8 @@ console.log('`About` component loaded asynchronously');
 })
 export class About {
 
-
   ngOnInit() {
-    console.log('hello `About` component');
+    // console.log('hello `About` component');
     // static data that is bundled
     // var mockData = require('assets/mock-data/mock-data.json');
     // console.log('mockData', mockData);
