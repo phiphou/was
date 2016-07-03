@@ -9,6 +9,7 @@
   "803": "Nuageux",
   "804": "Couvert",
   "T_UNIT": "°C",
+  "WEATHER_PROMPT":"Enter une ville and validez...",
   "WEATHER": "Météo",
   "ABOUT": "A propos",
   "MORE": "Plus d'infos »",

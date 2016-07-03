@@ -9,6 +9,7 @@
   "803": "Broken clouds",
   "804": "Overcast clouds",
   "T_UNIT": "°F",
+  "WEATHER_PROMPT":"Enter a city and press enter...",
   "WEATHER": "Weather",
   "ABOUT": "About",
   "MORE": "More »",

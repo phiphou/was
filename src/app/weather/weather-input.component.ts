@@ -3,12 +3,14 @@ import {City} from './City';
 import {ICity} from './ICity';
 import {MdInput} from '@angular2-material/input';
 import {WeatherService} from './weather.service';
+import { TranslatePipe } from 'ng2-translate/ng2-translate';
 
 @Component({
   selector: 'weather-input',
   directives: [MdInput],
+  pipes : [TranslatePipe],
   template: `<form (ngSubmit)="submit(city)" autocomplete="off">
-  <md-input placeholder="Enter a city and press enter"
+  <md-input placeholder="{{'WEATHER_PROMPT' | translate}}"
       [value]="weatherService.city != null ? weatherService.city.name: ''"
       (input)="city.name = $event.target.value" autofocus>
     </md-input>
