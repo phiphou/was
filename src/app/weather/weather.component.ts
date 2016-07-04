@@ -28,8 +28,8 @@ export class WeatherComponent {
     this.weatherService.getWeather(city);
   }
 
-  updateTemp(evt: any): void {
-    Settings.getInstance().isFarenheit = evt.checked;
+  updateTemp(evt?: any): void {
+    this.isFarenheit = evt && evt.checked !== undefined ? evt.checked : !this.isFarenheit;
   }
 
   searchForWeather(city: ICity = this.currentCity) {
