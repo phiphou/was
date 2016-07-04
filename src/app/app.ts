@@ -23,16 +23,7 @@ export class AppComponent implements OnInit {
         this.titleService.setTitle(ev.urlAfterRedirects.substring(1));
       }
     });
-    let userLang = navigator.language.split('-')[0];
-    userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
-    translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      document.querySelector('.en_flag').classList.add('lang_inactive');
-      document.querySelector('.fr_flag').classList.add('lang_inactive');
-      document.querySelector('.' + event.lang + '_flag').classList.remove('lang_inactive');
-      Settings.getInstance().isFarenheit = (event.lang === 'en');
-    });
-    translate.use(userLang);
-    router.navigate(['Weather']);
+
   }
 
   ngOnInit() {
@@ -41,6 +32,16 @@ export class AppComponent implements OnInit {
 
   ngAfterViewInit() {
     // console.log('jQuery version: ', $().jquery);
+    let userLang = navigator.language.split('-')[0];
+    userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      document.querySelector('.en_flag').classList.add('lang_inactive');
+      document.querySelector('.fr_flag').classList.add('lang_inactive');
+      document.querySelector('.' + event.lang + '_flag').classList.remove('lang_inactive');
+      Settings.getInstance().isFarenheit = (event.lang === 'en');
+    });
+    this.translate.use(userLang);
+    this.router.navigate(['Weather']);
     $(document).foundation;
     window.onscroll = function() {
       if (document.body.scrollTop > document.getElementById('heightTest').clientHeight) {

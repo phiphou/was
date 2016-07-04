@@ -9,12 +9,13 @@ import {TempConvertPipe} from '../shared/pipes/tempConvert.pipe';
 import {Settings} from '../shared/settings';
 import {WeatherInputComponent} from './weather-input.component';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
+import {MdSlideToggle} from '@angular2-material/slide-toggle';
 
 @Component({
   selector: 'weather',
   providers: [HTTP_PROVIDERS, Settings, WeatherService],
   pipes: [DateConvertPipe, TempConvertPipe, TranslatePipe],
-  directives: [NgFor, WeatherInputComponent],
+  directives: [NgFor, WeatherInputComponent, MdSlideToggle],
   template: require('./weather.template.html')
 })
 
@@ -27,18 +28,22 @@ export class WeatherComponent {
     this.weatherService.getWeather(city);
   }
 
-  updateTemp(): void {
-    this.isFarenheit = !this.isFarenheit;
+  updateTemp(evt: any): void {
+    Settings.getInstance().isFarenheit = evt.checked;
   }
+
   searchForWeather(city: ICity = this.currentCity) {
     this.weatherService.getWeather(this.currentCity);
   }
+
   get isFarenheit() {
     return Settings.getInstance().isFarenheit;
   }
+
   set isFarenheit(b: boolean) {
     Settings.getInstance().isFarenheit = b;
   }
+
   constructor(public translate: TranslateService, private weatherService: WeatherService) {
     this.searchForWeather(this.currentCity);
   }

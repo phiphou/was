@@ -15,6 +15,11 @@
       <img src="img/osm_icon.png" class="osm_link_icon">
     </a>
     <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
+    <div class="unit_switcher_cont flex-item">
+          <div class="unit_switcher_label">C</div>
+        <md-slide-toggle  [checked]="isFarenheit"  (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
+        <div class="unit_switcher_label">F</div>
+      </div>
   </div>
   <BR>
   <ul>
