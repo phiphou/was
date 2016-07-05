@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Router, provideRouter, RouterConfig} from '@angular/router';
 import {WeatherComponent} from './weather/weather.component';
+import {WeatherDetailComponent} from './weather/weather.detail.component';
 import {provideWebpack} from '../../config/webpack/webpackAsync';
 
 @Component({ template: `` })
@@ -12,8 +13,9 @@ class DummyComponent {
 
 export const routes: RouterConfig = [
   { path: '', component: WeatherComponent },
- { path: 'Weather', component: WeatherComponent },
- { path: 'About', component: 'About' }
+  { path: 'Weather', component: WeatherComponent },
+  { path: 'WeatherDetail', component: WeatherDetailComponent },
+  { path: 'About', component: 'About' }
 ];
 
 export const asyncRoutes: AsyncRoutes = {

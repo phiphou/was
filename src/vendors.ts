@@ -18,7 +18,8 @@ import 'foundation-sites/dist/plugins/foundation.util.triggers';
 
 // Angulat2-material
 import '@angular2-material/input';
-//import '@angular2-material/slide-toggle';
+import '@angular2-material/slide-toggle';
+import '@angular2-material/card';
 
 // ng2-translate
 import 'ng2-translate/ng2-translate';

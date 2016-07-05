@@ -42,6 +42,28 @@ export class WeatherService {
       );
   }
 
+  getWeather2(city: ICity) {
+    this.city = city;
+    this.pending = true;
+    this.weather = null;
+    this.error = false;
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('appid', API_CONFIG.appId);
+    params.set('q', city.name);
+    params.set('lang', 'en');
+    params.set('units', 'metric');
+    this._http.get(this.url + '/city/', {
+      search: params
+    })
+      //.delay(2000)
+      .map((res: Response) => res.json())
+      .subscribe(
+      (data: any) => { this.parseWeather2(data); return this.weather; },
+      error => console.log('Could not load weather.'),
+      () => this.pending = false
+      );
+  }
+
   parseWeather(data: any) {
     if (data.cod !== undefined) {
       if (data.cod === '404' || data.city === null) {
@@ -54,6 +76,24 @@ export class WeatherService {
           let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon, item.temp);
           return weather;
         });
+
+      }
+    }
+  }
+
+  parseWeather2(data: any) {
+    if (data.cod !== undefined) {
+      if (data.cod === '404' || data.city === null) {
+        this.errMsg = 'City Not found';
+        this.city = null;
+        this.error = true;
+      } else {
+        this.city = new City(data.city.name, data.city.id, data.city.coord);
+        this.weather = data.list.map((item: any) => {
+          let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon, item.main.temp);
+          return weather;
+        });
+          this.weather = this.weather.splice(0,8);
       }
     }
   }

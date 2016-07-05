@@ -1,0 +1,42 @@
+<div class="row content-section">
+  <h6 *ngIf="weatherService.pending">
+    <i class="fa fa-spinner fa-spin"></i>
+    &nbsp;searching weather data for {{weatherService.city.name}}
+  </h6>
+  <div *ngIf="weatherService.error && !weatherService.pending" class="callout alert" data-closable>
+    {{weatherService.errMsg}}
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div id='city_cont'>
+    <a class="flex-item" id="osm_link" *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
+      <img src="img/osm_icon.png" class="osm_link_icon">
+    </a>
+    <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
+    <div class="unit_switcher_cont flex-item">
+      <div class="unit_switcher_label">C</div>
+      <md-slide-toggle [checked]="isFarenheit" (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
+      <div class="unit_switcher_label">F</div>
+    </div>
+  </div>
+  <BR>
+  <div class="cards">
+    <md-card *ngFor="let weather of weatherService.weather">
+      <md-card-title class="weather_detail_time">
+  <i class="fa fa-clock-o"></i>
+{{weather.dt | timeConvert}}</md-card-title>
+      <md-card-title class="weather_detail_temp">
+        <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" class="weather_img_detail" />
+        <span class="temp_label">
+           {{weather.temp | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}}
+        </span>
+      </md-card-title>
+      <md-card-content>
+        <span class="weather_detail_desc">{{weather.id | translate}}</span>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+<BR><BR><BR><BR><BR>
