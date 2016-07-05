@@ -16,10 +16,10 @@
     </a>
     <weather-input class="flex-item" (cityChangedEvent)="cityChanged($event)"></weather-input>
     <div class="unit_switcher_cont flex-item">
-          <div class="unit_switcher_label">C</div>
-        <md-slide-toggle  [checked]="isFarenheit"  (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
-        <div class="unit_switcher_label">F</div>
-      </div>
+      <div class="unit_switcher_label">C</div>
+      <md-slide-toggle [checked]="isFarenheit" (change)="updateTemp($event)" class="unit_switcher"></md-slide-toggle>
+      <div class="unit_switcher_label">F</div>
+    </div>
   </div>
   <BR>
   <ul>
@@ -27,9 +27,9 @@
       <div><strong><h4>{{weather.dt | dateConvert: translate.currentLang }}</h4></strong></div>
       <div style="display: flex;">
         <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" class="weather_img" />
-        <div>
-          <h3>{{weather.temp.day | tempConvert: isFarenheit | number:'1.0-1'}}{{'T_UNIT' | translate}}</h3>
-          <h6 class="weather_alt_temp">{{weather.temp.min | tempConvert: isFarenheit | number:'1.0-1'}}{{'T_UNIT' | translate}} / {{weather.temp.max | tempConvert: isFarenheit | number:'1.0-1'}}{{'T_UNIT' | translate}}</h6>
+        <div class="temp_block">
+          <h3>{{weather.temp.day | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}}</h3>
+          <h6 class="weather_alt_temp">{{weather.temp.min | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}} / {{weather.temp.max | tempConvert: isFarenheit | number:'1.0-1'}}{{!isFarenheit ? '°C' : '°F'}}</h6>
         </div>
         <div class="weather_desc">{{weather.id | translate}}</div>
       </div>
