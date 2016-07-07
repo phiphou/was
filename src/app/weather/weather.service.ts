@@ -30,6 +30,7 @@ export class WeatherService {
     params.set('q', city.name);
     params.set('lang', 'en');
     params.set('units', 'metric');
+    params.set('cnt', '16');
     this._http.get(this.url + '/daily/', {
       search: params
     })
