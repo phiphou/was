@@ -13,13 +13,13 @@ __WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is
 ## Quick Start
 
 ```bash
-$ npm install -g webpack webpack-dev-server karma-cli protractor typings typescript tslint
-$ git clone https://github.com/phiphou/was.git
+$ npm install -g webpack webpack-dev-server karma-cli protractor typings typescript tslint rimraf
+$ git clone --depth 1 https://github.com/phiphou/was.git
 $ cd was
 $ npm install
 $ npm run start
 ```
-Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in `./src/app/`
+Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in [`./src/app/`](https://github.com/phiphou/was/blob/master/src/app/app.ts)
 
 ## Table of contents
  * [Global dependencies](#global-dependencies)
@@ -84,6 +84,7 @@ Before installing the application, you have to install some global dependencies.
 | [npm](http://nodejs.org)                      | 3.x.x   | [http://node.org](http://nodejs.org) |
 | [Typings](https://github.com/typings/typings) | 1.x.x   | `npm i typings -g`                   |
 | [Webpack](http://webpack.github.io)           | 1.x.x   | `npm i webpack -g`                   |
+| [Rimraf](https://github.com/isaacs/rimraf)    | 2.5.x   | `npm i rimraf -g`                    |
 
 #### Dev dependencies
 
@@ -97,7 +98,7 @@ Before installing the application, you have to install some global dependencies.
 
 You can also install all these dependencies in just one command :
 
-`$ npm i -g webpack webpack-dev-server karma-cli protractor typings typescript tslint`
+`$ npm i -g webpack webpack-dev-server karma-cli protractor typings typescript tslint rimraf`
 
 ## Install
 
