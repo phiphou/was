@@ -9,7 +9,6 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-
   <div id='city_cont'>
     <a class="flex-item" id="osm_link" *ngIf="!weatherService.pending && !weatherService.error" href="{{weatherService.city.osm_link}}" target="_blank">
       <img src="img/osm_icon.png" class="osm_link_icon">
@@ -24,7 +23,7 @@
   <BR>
   <ul>
     <li class="weather" *ngFor="let weather of weatherService.weather">
-      <div><span><i class="fa fa-calendar"></i>&nbsp;</span><span class="weather_date">{{weather.dt | dateConvert: translate.currentLang }}</span></div>
+      <div><span style="vertical-align: text-bottom;"><i class="fa fa-calendar"></i>&nbsp;</span><span class="weather_date">{{weather.dt | dateConvert: translate.currentLang }}</span></div>
       <div style="display: flex;">
         <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" class="weather_img" />
         <div class="temp_block">

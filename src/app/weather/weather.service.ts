@@ -30,7 +30,6 @@ export class WeatherService {
     params.set('q', city.name);
     params.set('lang', 'en');
     params.set('units', 'metric');
-    params.set('cnt', '16');
     this._http.get(this.url + '/daily/', {
       search: params
     })
@@ -74,7 +73,8 @@ export class WeatherService {
       } else {
         this.city = new City(data.city.name, data.city.id, data.city.coord);
         this.weather = data.list.map((item: any) => {
-          let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon, item.temp);
+          let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon,
+            item.temp, item.weather[0].speed, item.weather[0].deg, item.humidity, item.pressure);
           return weather;
         });
 
@@ -91,10 +91,11 @@ export class WeatherService {
       } else {
         this.city = new City(data.city.name, data.city.id, data.city.coord);
         this.weather = data.list.map((item: any) => {
-          let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon, item.main.temp);
+          let weather: Weather = new Weather(item.dt, item.weather[0].id.toString(), item.weather[0].icon,
+            item.main.temp, item.wind.speed, item.wind.deg, item.main.humidity, item.main.sea_level);
           return weather;
         });
-          this.weather = this.weather.splice(0,8);
+        this.weather = this.weather.splice(0, 8);
       }
     }
   }

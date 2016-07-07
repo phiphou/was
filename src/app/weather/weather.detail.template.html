@@ -25,8 +25,7 @@
   <div class="cards">
     <md-card *ngFor="let weather of weatherService.weather">
       <md-card-title class="weather_detail_time">
-  <i class="fa fa-clock-o"></i>
-{{weather.dt | timeConvert}}</md-card-title>
+        <i class="fa fa-clock-o"></i> {{weather.dt | timeConvert}}</md-card-title>
       <md-card-title class="weather_detail_temp">
         <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" class="weather_img_detail" />
         <span class="temp_label">
@@ -35,8 +34,20 @@
       </md-card-title>
       <md-card-content>
         <span class="weather_detail_desc">{{weather.id | translate}}</span>
+        <BR>
+        <BR><i class="wi wi-strong-wind"></i>Vent :
+        <span>{{weather.windSpeed | windSpeedConvert: isFarenheit  | number:'1.0-1'}}{{('WIND_UNIT' | translate )}}</span>&nbsp;
+        <span>{{weather.windDir | windConvert}}/{{weather.windDir | windConvert :('WEST' | translate )}}</span>
+        <BR>
+        <span><i class="fa fa-tint"></i>Humidité: {{weather.humidity}}%</span>&nbsp;
+        <BR>
+        <span>Pression: {{weather.pressure}}hPa</span>
       </md-card-content>
     </md-card>
   </div>
 </div>
-<BR><BR><BR><BR><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
