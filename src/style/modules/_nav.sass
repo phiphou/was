@@ -16,6 +16,9 @@ li
     background: black
     border: none
 
+.active
+  background-color: #67707E
+
 .contain-to-grid
   text-align: center
   background-color: black
@@ -40,8 +43,6 @@ li
 .top-bar, .top-bar ul
   background-color: #0a0a0a
   padding: 0
-  > li.active
-    background-color: brown
 
 .menu2
   z-index: 9000000
@@ -56,6 +57,12 @@ li
 
 .en_flag, .fr_flag
   border: none
+  width: 30px
+  transition: width .25s ease-out
 
 .lang_inactive
   width: 18px
+
+div#flags_cont
+  float: right
+  margin-bottom: 4px

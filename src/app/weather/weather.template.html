@@ -24,7 +24,7 @@
   <BR>
   <ul>
     <li class="weather" *ngFor="let weather of weatherService.weather">
-      <div><strong><h4>{{weather.dt | dateConvert: translate.currentLang }}</h4></strong></div>
+      <div><span><i class="fa fa-calendar"></i>&nbsp;</span><span class="weather_date">{{weather.dt | dateConvert: translate.currentLang }}</span></div>
       <div style="display: flex;">
         <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" class="weather_img" />
         <div class="temp_block">

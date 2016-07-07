@@ -42,9 +42,6 @@ app:empty + .loading h1
     text-align: center
     transform: translate(0, -50%)
 
-.active
-  background-color: #67707E
-
 ul
   list-style-type: none
   margin-left: 1.25rem
@@ -127,10 +124,10 @@ label.md-input-placeholder.md-float.md-empty
 .md-input-infix
   font-size: 30px
 
-div#flags_cont
-  float: right
+.top-bar
+  .top-bar-left, .top-bar-right
+    flex: 1 0 0px
 
-@media screen and (min-width: 40em)
-  .top-bar
-    .top-bar-left, .top-bar-right
-      flex: 1 0 0px
+.weather_date
+  font-size: 20px
+  font-weight: 600
