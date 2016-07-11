@@ -97,9 +97,9 @@
     "typescript": "^1.8.0",
     "typings": "^1.1.0",
     "webpack": "^1.13.0",
-    "webpack-browser-plugin": "^1.0.7",
+    "webpack-browser-plugin": "^1.0.8",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0",
-    "yargs": "^4.7.1"
+    "yargs": "^4.8.0"
   }
 }
