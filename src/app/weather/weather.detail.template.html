@@ -37,7 +37,9 @@
         <BR>
         <BR><i class="wi wi-strong-wind"></i>Vent :
         <span>{{weather.windSpeed | windSpeedConvert: isFarenheit  | number:'1.0-1'}}{{('WIND_UNIT' | translate )}}</span>&nbsp;
-        <span>{{weather.windDir | windConvert}}/{{weather.windDir | windConvert :('WEST' | translate )}}</span>
+        <span><i class="wi wi-wind wi-wind-from-{{(weather.windDir | windConvert).toLowerCase()}}"></i></span>
+
+<span>{{weather.windDir | windConvert :('WEST' | translate )}}</span>
         <BR>
         <span><i class="fa fa-tint"></i>Humidité: {{weather.humidity}}%</span>&nbsp;
         <BR>
