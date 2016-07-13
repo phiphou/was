@@ -28,7 +28,6 @@ install:
 
 before_script:
  - chmod +x ./config/test.sh
- - "./node_modules/protractor/bin/webdriver-manager update"
 
 script:
   - npm run build
