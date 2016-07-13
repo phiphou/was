@@ -9,4 +9,6 @@ dependencies:
 
 test:
    override:
+     - npm run build
      - npm test
+     - ./config/test.sh
