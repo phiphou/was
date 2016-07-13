@@ -5,7 +5,7 @@ machine:
 
 dependencies:
    override:
-     - npm install webpack typings http-server tslint protractor -g
+     - npm install webpack typings http-server tslint -g
      - npm install
 
 test:
