@@ -16,8 +16,8 @@ exports.config = {
   capabilities: {
     "browserName": "chrome",
     "maxInstances": 1,
-    "version": 53,
-    "platform": "LINUX",
+    //"version": 53,
+    //"platform": "WINDOWS",
     "seleniumProtocol": "WebDriver"
   },
   onPrepare: function() {
