@@ -1,14 +1,16 @@
 machine:
    timezone: Europe/Paris
    node:
-     version: 5.10.0
+     version: 6.0.0
 
 dependencies:
    override:
+     - npm install  -g
      - npm install
 
 test:
    override:
      - npm run build
      - npm test
+     - chmod +x ./config/test.sh
      - ./config/test.sh
