@@ -1,17 +1,21 @@
 machine:
-   timezone: Europe/Paris
-   node:
-     version: 5.10.0
+  timezone: Europe/Paris
+  node:
+    version: 5.10.0
+  post:
+    - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - sudo apt-get update
+    - sudo apt-get install google-chrome-stable
 
 dependencies:
-   override:
-     - npm install webpack http-server typings tslint -g
-     - npm install
+  override:
+    - npm install webpack http-server typings tslint -g
+    - npm install
 
 test:
-   override:
-     - export CHROME_BIN=chromium-browser
-     - npm run build
-     - npm test
-     - chmod +x ./config/test.sh
-     - ./config/test.sh
+  override:
+    - npm run build
+    - npm test
+    - chmod +x ./config/test.sh
+    - ./config/test.sh
