@@ -5,7 +5,7 @@ machine:
 
 dependencies:
    override:
-     - npm install webpack typings tslint -g
+     - npm install webpack http-server typings tslint -g
      - npm install
 
 test:
