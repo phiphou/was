@@ -14,11 +14,7 @@ exports.config = {
   },
   directConnect: true,
   capabilities: {
-    "browserName": "chrome",
-    "maxInstances": 1,
-    //"version": 53,
-    //"platform": "WINDOWS",
-    "seleniumProtocol": "WebDriver"
+    "browserName": "chrome"
   },
   onPrepare: function() {
     var SpecReporter = require('jasmine-spec-reporter');
