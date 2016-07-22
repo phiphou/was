@@ -83,7 +83,7 @@ Before installing the application, you have to install some global dependencies.
 | [NodeJS](http://nodejs.org)                   | 5.x.x   | [http://node.org](http://nodejs.org) |
 | [npm](http://nodejs.org)                      | 3.x.x   | [http://node.org](http://nodejs.org) |
 | [Typings](https://github.com/typings/typings) | 1.x.x   | `npm i typings -g`                   |
-| [Webpack](http://webpack.github.io)           | 1.x.x   | `npm i webpack -g`                   |
+| [Webpack](http://webpack.github.io)           | 1.3.x   | `npm i webpack -g`                   |
 | [Rimraf](https://github.com/isaacs/rimraf)    | 2.5.x   | `npm i rimraf -g`                    |
 
 #### Dev dependencies
@@ -91,10 +91,10 @@ Before installing the application, you have to install some global dependencies.
 | Dependency                                         | Version | Install                       |
 | :------------------------------------------------- | :------ | :---------------------------- |
 | [Karma](https://github.com/karma-runner/karma-cli) | 1.x.x   | `npm i karma-cli -g`          |
-| [Protractor](http://www.protractortest.org)        | 3.x.x   | `npm i protractor -g`         |
+| [Protractor](http://www.protractortest.org)        | 4.x.x   | `npm i protractor -g`         |
 | [Tslint](https://palantir.github.io/tslint)        | 3.x.x   | `npm i tslint -g`             |
 | [TypeScript](http://www.typescriptlang.org)        | 1.8.x   | `npm i typescript -g`         |
-| [Webpack dev server](http://webpack.github.io)     | 1.x.x   | `npm i webpack-dev-server -g` |
+| [Webpack dev server](http://webpack.github.io)     | 1.3.x   | `npm i webpack-dev-server -g` |
 
 You can also install all these dependencies in just one command :
 
