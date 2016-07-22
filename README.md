@@ -21,13 +21,15 @@ $ cd was
 $ npm install
 $ npm run start
 ```
-Open your browser at [http://localhost:8080](http://localhost:8080) and start dev in [`./src/app/`](https://github.com/phiphou/was/blob/master/src/app/app.ts)
+Open your browser at [http://localhost:8080](http://localhost:8080) and start developing in [`./src/app/`](https://github.com/phiphou/was/blob/master/src/app/app.ts)
 
 ## Table of contents
- * [Global dependencies](#global-dependencies)
-     * [build dependencies](#build-dependencies)
-     * [dev dependencies](#dev-dependencies)
- * [Install](#install)
+ * [Quick Start](#quick-start)
+ * [Installing](#installing)
+     * [Global dependencies](#global-dependencies)
+         * [build dependencies](#build-dependencies)
+         * [dev dependencies](#dev-dependencies)
+     * [Install](#install)
  * [Usage](#usage)
      * [Development](#start-developing)
      * [Building](#building)
@@ -74,11 +76,13 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 [comment]: # ( └──package.json               * what npm uses to manage it's dependencies)
 [comment]: # (```)
 
-## Global dependencies
+## Installing
+
+### Global dependencies
 
 Before installing the application, you have to install some global dependencies.
 
-#### Build dependencies
+##### Build dependencies
 
 | Dependency                                    | Version | Install                              |
 | :-------------------------------------------- | :------ | :----------------------------------- |
@@ -88,7 +92,7 @@ Before installing the application, you have to install some global dependencies.
 | [Webpack](http://webpack.github.io)           | 1.3.x   | `npm i webpack -g`                   |
 | [Rimraf](https://github.com/isaacs/rimraf)    | 2.5.x   | `npm i rimraf -g`                    |
 
-#### Dev dependencies
+##### Dev dependencies
 
 | Dependency                                         | Version | Install                       |
 | :------------------------------------------------- | :------ | :---------------------------- |
@@ -102,7 +106,7 @@ You can also install all these dependencies in just one command :
 
 `$ npm i -g webpack webpack-dev-server karma-cli protractor typings typescript tslint rimraf`
 
-## Install
+### Install
 
 Clone or fork this repo and run `npm install` to install the application.
 
