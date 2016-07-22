@@ -8,7 +8,7 @@
 
 # WAS
 
-__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using the new [Angular2](https://angular.io/) with a [Webpack](http://webpack.github.io/) building environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather application that uses the [Openweather API](http://openweathermap.org/api).     
+__WAS__ is an acronym for __Webpack Angular Sample__.The goal of this project is to offer a sample application using [Angular2](https://angular.io/) with a [Webpack](http://webpack.github.io/) building environment. Instead of an empty seed or the classic Todo example, it shows a minimalist weather application that uses the [Openweather API](http://openweathermap.org/api).     
 
 ## Quick Start
 
