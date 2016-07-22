@@ -82,7 +82,7 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 Before installing the application, you have to install some global dependencies.
 
-##### Build dependencies
+#### Build dependencies
 
 | Dependency                                    | Version | Install                              |
 | :-------------------------------------------- | :------ | :----------------------------------- |
@@ -92,7 +92,7 @@ Before installing the application, you have to install some global dependencies.
 | [Webpack](http://webpack.github.io)           | 1.3.x   | `npm i webpack -g`                   |
 | [Rimraf](https://github.com/isaacs/rimraf)    | 2.5.x   | `npm i rimraf -g`                    |
 
-##### Dev dependencies
+#### Dev dependencies
 
 | Dependency                                         | Version | Install                       |
 | :------------------------------------------------- | :------ | :---------------------------- |
