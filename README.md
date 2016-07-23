@@ -78,6 +78,10 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 ## Installing
 
+First, make sure you've got NodeJS installed. If not, go to [http://nodejs.org](http://nodejs.org) to download and install it. It will also install NPM.
+
+If everything is ok, `node -v` should print your node version and `npm -v` should print NPM's one. Minimum requirements are node >= ``5.x.x`` and NPM >= `3.x.x` .
+
 ### Global dependencies
 
 Before installing the application, you have to install some global dependencies.
@@ -86,8 +90,6 @@ Before installing the application, you have to install some global dependencies.
 
 | Dependency                                    | Version | Install                              |
 | :-------------------------------------------- | :------ | :----------------------------------- |
-| [NodeJS](http://nodejs.org)                   | 5.x.x   | [http://node.org](http://nodejs.org) |
-| [npm](http://nodejs.org)                      | 3.x.x   | [http://node.org](http://nodejs.org) |
 | [Typings](https://github.com/typings/typings) | 1.x.x   | `npm i typings -g`                   |
 | [Webpack](http://webpack.github.io)           | 1.3.x   | `npm i webpack -g`                   |
 | [Rimraf](https://github.com/isaacs/rimraf)    | 2.5.x   | `npm i rimraf -g`                    |
