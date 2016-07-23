@@ -78,13 +78,13 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 ## Installing
 
-First, make sure you've got NodeJS installed. If not, go to [http://nodejs.org](http://nodejs.org) to download and install it. It will also install NPM.
+First, make sure you've got [NodeJS](http://nodejs.org) installed. If not, go to [nodejs.org](http://nodejs.org) to download and install it. It will also install NPM.
 
-If everything is ok, `node -v` should print your node version and `npm -v` should print NPM's one. Minimum requirements are node >= ``5.x.x`` and NPM >= `3.x.x` .
+If everything is ok, `node -v` should print your node version and `npm -v` should print NPM's one. Minimum requirements for thid project are node >= `5.x.x` and NPM >= `3.x.x`.
 
 ### Global dependencies
 
-Before installing the application, you have to install some global dependencies.
+Before installing the application, you may have to install some global dependencies.
 
 #### Build dependencies
 
