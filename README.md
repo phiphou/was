@@ -80,7 +80,7 @@ Open your browser at [http://localhost:8080](http://localhost:8080) and start de
 
 First, make sure you've got [NodeJS](http://nodejs.org) installed. If not, go to [nodejs.org](http://nodejs.org) to download and install it. It will also install NPM.
 
-If everything is ok, `node -v` should print your node version and `npm -v` should print NPM's one. Minimum requirements for thid project are node >= `5.x.x` and NPM >= `3.x.x`.
+If everything is ok, `node -v` should print your node version and `npm -v` should print NPM's one. Minimum requirements for this project are node >= `5.x.x` and NPM >= `3.x.x`.
 
 ### Global dependencies
 
@@ -154,7 +154,7 @@ You can run unit-tests by just typing :
 ```bash
 $ npm run test
 ```
-[Karma](https://karma-runner.github.io/0.13/index.html) is used as test-runner, you can configure it in the `./config/karma.conf.js` file.
+[Karma](https://karma-runner.github.io/0.13/index.html) is used as test-runner, you can configure it in the [`./config/karma.conf.js`](/blob/master/config/karma.conf.js) file.
 
 [comment]: # (Tests are written for Jasmine, see `./src/app/`)
 
@@ -165,11 +165,11 @@ You can run e2e-tests by just typing :
 ```bash
 $ npm run e2e
 ```
-[Protractor](http://www.protractortest.org) is used for end-to-end tests, you can configure it in the `./config/protractor.conf.js` file.
+[Protractor](http://www.protractortest.org) is used for end-to-end tests, you can configure it in the [`./config/protractor.conf.js`](/blob/master/config/protractor.conf.js) file.
 
 ##### Code coverage
 
-[Istanbul](https://github.com/gotwarlost/istanbul) is used as code coverage tool. You can configure it in the `./config/karma.conf.js` file.
+[Istanbul](https://github.com/gotwarlost/istanbul) is used as code coverage tool. You can configure it in the [`./config/karma.conf.js`](/blob/master/config/karma.conf.js) file.
 
 It produce reports you'll find in the `./coverage` folder each time you run unit-tests.
 
