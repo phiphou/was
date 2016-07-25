@@ -179,7 +179,7 @@ You can also use `npm run coverage`, it will run unit-tests and automatically op
 
 Because this app use [Angular's HTML5 mode](https://angular.io/docs/js/latest/api/common/index/LocationStrategy-class.html), url rewriting is needed.
 
-If you're deploying it on an Apache server, you can use the provided `.htaccess` file.
+If you're deploying it on an Apache server, you can use the provided [`.htaccess`](/src/public/.htaccess) file.
 
 If you use other hosting system, look at this file to see what url rewriting configuration is needed.   
 
