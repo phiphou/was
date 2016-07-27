@@ -6,9 +6,9 @@
   "211": "Orage",
   "212": "Orage intense",
   "221": "Violent orage",
-  "230": "Orange avec légère bruine",
-  "231": "Orange avec bruine",
-  "232": "Orange avec forte bruine",
+  "230": "Orage avec légère bruine",
+  "231": "Orage avec bruine",
+  "232": "Orage avec forte bruine",
   "300": "Légère Bruine",
   "301": "Bruine",
   "302": "Forte bruine",
@@ -65,7 +65,7 @@
   "MORE": "Plus d'infos »",
   "WEBPACK": "Gagnez du temps et travaillez efficacement grâce à une solution basée sur Webpack.",
   "FOUNDATION_SITES": "Un framework complet, intuitif et puissant pour un développement web rapide et facile.",
-  "FONT_AWESOME": "La désormais célèbre police d'icône designées pour le Web.",
+  "FONT_AWESOME": "La désormais célèbre police d'icônes designées pour le Web.",
   "SASS": "Le langage de feuille de style dynamique qui rend le CSS encore plus puissant.",
-  "INTRO": "Démarrez rapidement avec tout ce qu'il faut pour vous concentrer sur l'essentiel: l'application."
+  "INTRO": "Démarrez rapidement avec tout ce qu'il vous faut pour vous concentrer sur l'essentiel: l'application."
 }
